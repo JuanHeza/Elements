@@ -1,0 +1,14 @@
+07:57 p. m. 01/10/2019
+	Recuerda 710 x 520
+	los tiles de portadas llevan una relacion de X & Y = 1.5 * X
+	Marco = Form1
+	Main = MainPage
+	Comic = ComicControl
+
+To Do
+C ¬ Obtener carpetas y archivos contenidos
+C ¬ Generar tile por carpeta/archivo
+C ¬ Imagen de tile con portadas & con live en caso de carpetas
+C ¬ Texto del Tile sera la direccion de la carpeta o archivo, texto oculto
+O ¬ Formulario para establecer las rutas para cada pagina
+

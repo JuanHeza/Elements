@@ -1,0 +1,15 @@
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\Elements.exe.config
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\Elements.exe
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\Elements.pdb
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\MetroFramework.Design.dll
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\MetroFramework.dll
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\MetroFramework.Fonts.dll
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.csprojResolveAssemblyReference.cache
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.Form1.resources
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.Properties.Resources.resources
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.csproj.GenerateResource.Cache
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.exe
+c:\users\juanenrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.pdb
+C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.MainPage.resources
+C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.ComicControl.resources
+C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.Original.resources
