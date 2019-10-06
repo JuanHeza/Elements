@@ -6,9 +6,23 @@
 	Comic = ComicControl
 
 To Do
-C � Obtener carpetas y archivos contenidos
-C � Generar tile por carpeta/archivo
-C � Imagen de tile con portadas & con live en caso de carpetas
-C � Texto del Tile sera la direccion de la carpeta o archivo, texto oculto
-O � Formulario para establecer las rutas para cada pagina
+C ¬ Obtener carpetas y archivos contenidos
+	Cubierto Parcialmente (06/10)
+C ¬ Generar tile por carpeta/archivo
+	cubierto Parcialmente (06/10)
+C ¬ Imagen de tile con portadas & con live en caso de carpetas
+C ¬ Texto del Tile sera la direccion de la carpeta o archivo, texto oculto
+V ¬ Preview dee los primeros  min en x3 para durar 40 seg
+O ¬ Formulario para establecer las rutas para cada pagina
+O ¬ Iniciar seseion en google drive paa usarlo de servidor
+O ¬ Agregar servicios to tachimoyi
+G ¬ compartir entre dispositivos "hacer disponible offline" / "disponible para todos los dispositivos" / "enviar a _-_ dispositivo"
+G ¬ archivo Bson/MongoDB llamado updates para actualizar contenido y versiones de la app
 
+Simbologia
+C ¬ Comic
+E ¬ Ebook
+V ¬ Video
+M ¬ Musica
+G ¬ Generl
+O ¬ Opciones
