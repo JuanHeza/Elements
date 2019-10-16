@@ -1,4 +1,4 @@
-07:57 p. m. 01/10/2019
+﻿07:57 p. m. 01/10/2019
 	Recuerda 710 x 520
 	los tiles de portadas llevan una relacion de X & Y = 1.5 * X
 	Marco = Form1
@@ -24,5 +24,5 @@ C ¬ Comic
 E ¬ Ebook
 V ¬ Video
 M ¬ Musica
-G ¬ Generl
+G ¬ General
 O ¬ Opciones
