@@ -19,32 +19,32 @@ Las primeras cuatro siendo la seccion principal debido a ser donde se concentran
 
 ## Tareas
 ### Comic
-	-[] Obtener carpetas y archivos contenidos.
+	- [ ] Obtener carpetas y archivos contenidos.
 	*Cubierto Parcialmente (06/10)*
-	-[] Generar tile por carpeta/archivo.
+	- [ ] Generar tile por carpeta/archivo.
 	*cubierto Parcialmente (06/10)*
-	-[] Imagen de tile con portadas & con live en caso de carpetas.
-	-[] Texto del Tile sera la direccion de la carpeta o archivo, texto oculto.
+	- [ ] Imagen de tile con portadas & con live en caso de carpetas.
+	- [ ] Texto del Tile sera la direccion de la carpeta o archivo, texto oculto.
 
 ### Video
-	-[] Preview de los primeros min en velocidad X3 para durar 40 seg.
+	- [ ] Preview de los primeros min en velocidad X3 para durar 40 seg.
 
 ### Ebook
-	-[] Pendiente.
+	- [ ] Pendiente.
 
 ### Musica
-	-[] Pendiente.
+	- [ ] Pendiente.
 
 ### Opciones
-	-[] Formulario para establecer las rutas para cada pagina.
-	-[] Iniciar sesion en Google Drive para usarlo de servidor.
-	-[] Agregar servicios tipo Tachimoyi.
+	- [ ] Formulario para establecer las rutas para cada pagina.
+	- [ ] Iniciar sesion en Google Drive para usarlo de servidor.
+	- [ ] Agregar servicios tipo Tachimoyi.
 
 ### General
-	-[] Compartir entre dispositivos "hacer disponible offline" / "disponible para todos los dispositivos" / "enviar a ___ dispositivo".
-	-[] Archivo Bson/MongoDB llamado updates para actualizar contenido y versiones de la app.
-	-[] Conectar a Google Drive para usar las funciones en la nube.
-	-[] Portear a version movil.
+	- [ ] Compartir entre dispositivos "hacer disponible offline" / "disponible para todos los dispositivos" / "enviar a ___ dispositivo".
+	- [ ] Archivo Bson/MongoDB llamado updates para actualizar contenido y versiones de la app.
+	- [ ] Conectar a Google Drive para usar las funciones en la nube.
+	- [ ] Portear a version movil.
 
 ## Punto de partida
 
