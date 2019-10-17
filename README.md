@@ -19,6 +19,7 @@ Las primeras cuatro siendo la seccion principal debido a ser donde se concentran
 
 ## Tareas
 ### Comic
+
 	- [ ] Obtener carpetas y archivos contenidos.
 	*Cubierto Parcialmente (06/10)*
 	- [ ] Generar tile por carpeta/archivo.
@@ -27,20 +28,25 @@ Las primeras cuatro siendo la seccion principal debido a ser donde se concentran
 	- [ ] Texto del Tile sera la direccion de la carpeta o archivo, texto oculto.
 
 ### Video
+
 	- [ ] Preview de los primeros min en velocidad X3 para durar 40 seg.
 
 ### Ebook
+
 	- [ ] Pendiente.
 
 ### Musica
+
 	- [ ] Pendiente.
 
 ### Opciones
+
 	- [ ] Formulario para establecer las rutas para cada pagina.
 	- [ ] Iniciar sesion en Google Drive para usarlo de servidor.
 	- [ ] Agregar servicios tipo Tachimoyi.
 
 ### General
+
 	- [ ] Compartir entre dispositivos "hacer disponible offline" / "disponible para todos los dispositivos" / "enviar a ___ dispositivo".
 	- [ ] Archivo Bson/MongoDB llamado updates para actualizar contenido y versiones de la app.
 	- [ ] Conectar a Google Drive para usar las funciones en la nube.
