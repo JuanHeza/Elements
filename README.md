@@ -18,36 +18,37 @@ Hay 6 secciones principales:
 Las primeras cuatro siendo la seccion principal debido a ser donde se concentran la mayoria de los archivos, una seccion para mover archivos a la nube para compartirlos en otros dispositivos conectados y una para las debidas configuraciones, separada en pestañas para cada una de las 4 secciones principales, una de generales y una ultima para configurar el uso de nube.
 
 ## Tareas
-### Comic
+
+- **Comic**
 
 	- [ ] Obtener carpetas y archivos contenidos.
-	*Cubierto Parcialmente (06/10)*
+		*Cubierto Parcialmente (06/10)*
 	- [ ] Generar tile por carpeta/archivo.
 	*cubierto Parcialmente (06/10)*
 	- [ ] Imagen de tile con portadas & con live en caso de carpetas.
 	- [ ] Texto del Tile sera la direccion de la carpeta o archivo, texto oculto.
 
-### Video
+- **Video**
 
 	- [ ] Preview de los primeros min en velocidad X3 para durar 40 seg.
 
-### Ebook
+- **Ebook**
 
 	- [ ] Pendiente.
 
-### Musica
+- **Musica**
 
 	- [ ] Pendiente.
 
-### Opciones
+- **Opciones**
 
 	- [ ] Formulario para establecer las rutas para cada pagina.
 	- [ ] Iniciar sesion en Google Drive para usarlo de servidor.
 	- [ ] Agregar servicios tipo Tachimoyi.
 
-### General
+- **General**
 
-	- [ ] Compartir entre dispositivos "hacer disponible offline" / "disponible para todos los dispositivos" / "enviar a ___ dispositivo".
+	- [ ] Compartir entre dispositivos "hacer disponible offline", "disponible para todos los dispositivos", "enviar a dispositivo".
 	- [ ] Archivo Bson/MongoDB llamado updates para actualizar contenido y versiones de la app.
 	- [ ] Conectar a Google Drive para usar las funciones en la nube.
 	- [ ] Portear a version movil.
@@ -65,20 +66,20 @@ En esta parte estan las aplicaciones o programas cuyas funcionalidades fueron to
 
 ## Bocetos
 ### Inicio
-![Inicio](https://github.com/JuanHeza/Elements/blob/master/Elements/Bocetos/Boceto/Diapositiva1.PNG)
+![Inicio](/Elements/Bocetos/Boceto/Diapositiva1.PNG)
 ### Menu de Comics
-![Inicio](https://github.com/JuanHeza/Elements/blob/master/Elements/Bocetos/Boceto/Diapositiva2.PNG)
+![Menu de Comics](/Elements/Bocetos/Boceto/Diapositiva2.PNG)
 ### Lector & controles
-![Inicio](https://github.com/JuanHeza/Elements/blob/master/Elements/Bocetos/Boceto/Diapositiva3.PNG)
+![Lector & controles](/Elements/Bocetos/Boceto/Diapositiva3.PNG)
 ### Menu de Video
-![Inicio](https://github.com/JuanHeza/Elements/blob/master/Elements/Bocetos/Boceto/Diapositiva4.PNG)
+![Menu de Video](/Elements/Bocetos/Boceto/Diapositiva4.PNG)
 ### Reproductor de video
-![Inicio](https://github.com/JuanHeza/Elements/blob/master/Elements/Bocetos/Boceto/Diapositiva5.PNG)
+![Reproductor de video](/Elements/Bocetos/Boceto/Diapositiva5.PNG)
 ### Menu de Libros
-![Inicio](https://github.com/JuanHeza/Elements/blob/master/Elements/Bocetos/Boceto/Diapositiva6.PNG)
+![Menu de Libros](/Elements/Bocetos/Boceto/Diapositiva6.PNG)
 ### Opciones
-![Inicio](https://github.com/JuanHeza/Elements/blob/master/Elements/Bocetos/Boceto/Diapositiva8.PNG)
+![Opciones](/Elements/Bocetos/Boceto/Diapositiva8.PNG)
 
 ### Extras
  * [Registro](https://github.com/JuanHeza/Elements/blob/master/Elements/Registro.txt) sobre el progreso del proyecto 
- * Ultima actualizacion 13/Octubre/2019
+ * Ultima actualizacion *13/Octubre/2019*
