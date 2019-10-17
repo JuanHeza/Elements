@@ -18,7 +18,8 @@ Hay 6 secciones principales:
 Las primeras cuatro siendo la seccion principal debido a ser donde se concentran la mayoria de los archivos, una seccion para mover archivos a la nube para compartirlos en otros dispositivos conectados y una para las debidas configuraciones, separada en pestañas para cada una de las 4 secciones principales, una de generales y una ultima para configurar el uso de nube.
 
 ## Tareas
-Comic
+###Comic
+
 	- [ ] Obtener carpetas y archivos contenidos.
 	*Cubierto Parcialmente (06/10)*
 	- [ ] Generar tile por carpeta/archivo.
