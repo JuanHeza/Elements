@@ -6,4 +6,12 @@
 	Comic = ComicControl
 
 02:34 p. m. 17/10/2019
-despues de un par de semanas con la computadora deshabilitada se reanuda el proyecto
+	despues de un par de semanas con la computadora deshabilitada se reanuda el proyecto
+
+11:49 p. m. 22/10/2019
+	completado el control de comic, generando un tile por cada carpeta/archivo
+	ERROR se recibe una anchura superior a la que se asigno en propiedades por lo tanto los tiles estan mal
+
+12:31 a. m. 23/10/2019
+	creo haber reparado el error, estoy cansado, mañana seguire intentando o al menos lo parcheare
+

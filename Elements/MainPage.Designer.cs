@@ -33,7 +33,7 @@
             this.tileVideo = new MetroFramework.Controls.MetroTile();
             this.tileMusica = new MetroFramework.Controls.MetroTile();
             this.tileEbook = new MetroFramework.Controls.MetroTile();
-            this.tileMan = new MetroFramework.Controls.MetroTile();
+            this.tileNube = new MetroFramework.Controls.MetroTile();
             this.tileOpciones = new MetroFramework.Controls.MetroTile();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -112,23 +112,23 @@
             this.tileEbook.UseSelectable = true;
             this.tileEbook.UseStyleColors = true;
             // 
-            // tileMan
+            // tileNube
             // 
-            this.tileMan.ActiveControl = null;
-            this.tileMan.BackColor = System.Drawing.Color.Firebrick;
-            this.tileMan.Location = new System.Drawing.Point(390, 365);
-            this.tileMan.MinimumSize = new System.Drawing.Size(26, 10);
-            this.tileMan.Name = "tileMan";
-            this.tileMan.Size = new System.Drawing.Size(260, 100);
-            this.tileMan.Style = MetroFramework.MetroColorStyle.Red;
-            this.tileMan.TabIndex = 11;
-            this.tileMan.Text = "Man";
-            this.tileMan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tileMan.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tileMan.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tileMan.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.tileMan.UseSelectable = true;
-            this.tileMan.UseStyleColors = true;
+            this.tileNube.ActiveControl = null;
+            this.tileNube.BackColor = System.Drawing.Color.Firebrick;
+            this.tileNube.Location = new System.Drawing.Point(390, 365);
+            this.tileNube.MinimumSize = new System.Drawing.Size(26, 10);
+            this.tileNube.Name = "tileNube";
+            this.tileNube.Size = new System.Drawing.Size(260, 100);
+            this.tileNube.Style = MetroFramework.MetroColorStyle.Red;
+            this.tileNube.TabIndex = 11;
+            this.tileNube.Text = "Nube";
+            this.tileNube.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileNube.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileNube.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileNube.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileNube.UseSelectable = true;
+            this.tileNube.UseStyleColors = true;
             // 
             // tileOpciones
             // 
@@ -163,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.tileMan);
+            this.Controls.Add(this.tileNube);
             this.Controls.Add(this.tileOpciones);
             this.Controls.Add(this.tileMusica);
             this.Controls.Add(this.tileEbook);
@@ -187,7 +187,7 @@
         private MetroFramework.Controls.MetroTile tileVideo;
         private MetroFramework.Controls.MetroTile tileMusica;
         private MetroFramework.Controls.MetroTile tileEbook;
-        private MetroFramework.Controls.MetroTile tileMan;
+        private MetroFramework.Controls.MetroTile tileNube;
         private MetroFramework.Controls.MetroTile tileOpciones;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;

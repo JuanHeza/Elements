@@ -34,9 +34,9 @@ namespace Elements
             tileOpciones.UseTileImage = metroStatus;
             tileOpciones.Refresh();
             //
-            tileMan.Text = (metroStatus == true) ? " " : "Salir";
-            tileMan.UseTileImage = metroStatus;
-            tileMan.Refresh();
+            tileNube.Text = (metroStatus == true) ? " " : "Salir";
+            tileNube.UseTileImage = metroStatus;
+            tileNube.Refresh();
             //
             tileEbook.Text = (metroStatus == true) ? " " : "Ebook";
             tileEbook.UseTileImage = metroStatus;
@@ -78,8 +78,8 @@ namespace Elements
             tileMusica.Location = new System.Drawing.Point((d.X), (d.Y + b.Height + c.Height));
             tileMusica.Size = new System.Drawing.Size((b.Width), (b.Height));
             d = tileMusica.Location;
-            tileMan.Location = new System.Drawing.Point((d.X), (d.Y + b.Height + c.Height));
-            tileMan.Size = new System.Drawing.Size((b.Width), (b.Height));
+            tileNube.Location = new System.Drawing.Point((d.X), (d.Y + b.Height + c.Height));
+            tileNube.Size = new System.Drawing.Size((b.Width), (b.Height));
         }
 
         private void tileComic_Click(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace Elements
                 Form1.Instance.MetroContainer.Controls.Add(ComicCtrl);
             }
             Form1.Instance.MetroContainer.Controls["ComicControl"].BringToFront();
-            //Form1.Instance.metroBack.Visible = true;
+            Form1.Instance.metroBack.Visible = true;
         }
     }
 }

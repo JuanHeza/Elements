@@ -17,7 +17,6 @@ namespace Elements
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         static Form1 _instance;
-        static var DirMap = new Dictionary<string, string[]>();
         public static Form1 Instance
         {
             get
@@ -39,13 +38,13 @@ namespace Elements
             get { return metroBack; }
             set { metroBack = value; }
         }
-
+        /*
         public static object DirMap1
         {
             get {   return DirMap;  }
             set {   DirMap = value; }
         }
-
+        */
         public Form1()
         {
             InitializeComponent();
@@ -83,6 +82,7 @@ namespace Elements
 
         public static void GetAll()
         {
+            var DirMap = new Dictionary<string, string[]>();
             DirMap.Add("Comic", new String[] { "C:/Users/JuanEnrique/Desktop/DAKOTA/Comic" });
             String[] val = DirMap["Comic"];
             string[] Dirs = Directory.GetFiles(val[0],"*.cb*");

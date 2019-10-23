@@ -38,18 +38,21 @@
             this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.AutoScroll = true;
+            this.metroPanel1.HorizontalScrollbar = true;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(30, 50);
-            this.metroPanel1.MinimumSize = new System.Drawing.Size(65, 42);
+            this.metroPanel1.Location = new System.Drawing.Point(0, 60);
+            this.metroPanel1.MinimumSize = new System.Drawing.Size(710, 460);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(650, 420);
+            this.metroPanel1.Size = new System.Drawing.Size(710, 460);
             this.metroPanel1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel1.VerticalScrollbar = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = true;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // metroBack
@@ -91,7 +94,6 @@
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.Empty;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -99,7 +101,7 @@
 
         #endregion
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroLink metroBack;
+        public MetroFramework.Controls.MetroLink metroBack;
     }
 }
 
