@@ -16,7 +16,8 @@ namespace Elements
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
-        static Form1 _instance;
+        public static Form1 _instance;
+        public static System.Drawing.Size ControlSize; 
         public static Form1 Instance
         {
             get
@@ -53,10 +54,13 @@ namespace Elements
         private void Form1_Load(object sender, EventArgs e)
         {
             metroBack.Visible = false;
+            timer1.Start();
+            Console.WriteLine("Form1 Size {0}", this.Size);
             _instance = this;
             MainPage MP = new MainPage();
             MP.Dock = DockStyle.Fill;
             metroPanel1.Controls.Add(MP);
+            Contenido.InitDir();
         }
 
         private void metroBack_Click(object sender, EventArgs e)
@@ -80,13 +84,10 @@ namespace Elements
             }
         }
 
-        public static void GetAll()
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            var DirMap = new Dictionary<string, string[]>();
-            DirMap.Add("Comic", new String[] { "C:/Users/JuanEnrique/Desktop/DAKOTA/Comic" });
-            String[] val = DirMap["Comic"];
-            string[] Dirs = Directory.GetFiles(val[0],"*.cb*");
-            string[] dirss = Directory.GetDirectories(val[0]);
+            ControlSize = new System.Drawing.Size(this.Size.Width, (int)(this.Size.Height * 0.88));
+            this.metroPanel1.Size = ControlSize;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Elements
 {
     class Contenido
     {
+        public static Dictionary<string, List<String>> DirMap = new Dictionary<string, List<String>>();
         public Contenido Padre { get; set; }
         public List<Contenido> Hijo { get; set; }
         public string Nombre { get; set; }
@@ -55,7 +56,23 @@ namespace Elements
                 valor.Add(aux);
             }
             this.Hijo = valor;
-            Console.WriteLine("\t === Simulacro Terminado ===");
+            Console.WriteLine("\t=== Simulacro Terminado ===");
+        }
+
+        public static void AddtoDir(string cat, string dir){
+            DirMap[cat].Add(dir);
+            List<string> val = DirMap["Comic"];
+            string[] Dirs = Directory.GetFiles(val[0], "*.cb*");
+            string[] dirss = Directory.GetDirectories(val[0]);
+        }
+
+        public static void InitDir()
+        {
+            List<string> X = new List<string>();
+            DirMap.Add("Comic", X);
+            DirMap.Add("Musica", X);
+            DirMap.Add("Video", X);
+            DirMap.Add("Ebook", X);
         }
 
         public static string GetActualFile(string dir)

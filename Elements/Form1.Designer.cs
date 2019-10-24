@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroBack = new MetroFramework.Controls.MetroLink();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroPanel1.AutoScroll = true;
             this.metroPanel1.HorizontalScrollbar = true;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 60);
-            this.metroPanel1.MinimumSize = new System.Drawing.Size(710, 460);
+            this.metroPanel1.Location = new System.Drawing.Point(0, 50);
+            this.metroPanel1.MinimumSize = new System.Drawing.Size(71, 46);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(710, 460);
+            this.metroPanel1.Size = new System.Drawing.Size(710, 450);
             this.metroPanel1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -73,9 +74,15 @@
             this.metroBack.Visible = false;
             this.metroBack.Click += new System.EventHandler(this.metroBack_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(710, 520);
             this.Controls.Add(this.metroBack);
@@ -102,6 +109,7 @@
         #endregion
         private MetroFramework.Controls.MetroPanel metroPanel1;
         public MetroFramework.Controls.MetroLink metroBack;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

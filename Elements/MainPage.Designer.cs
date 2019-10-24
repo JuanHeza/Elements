@@ -170,6 +170,7 @@
             this.Controls.Add(this.tileVideo);
             this.Controls.Add(this.tileComic);
             this.Font = new System.Drawing.Font("Strasua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MinimumSize = new System.Drawing.Size(71, 52);
             this.Name = "MainPage";
             this.Padding = new System.Windows.Forms.Padding(3);

@@ -6,12 +6,16 @@
 	Comic = ComicControl
 
 02:34 p. m. 17/10/2019
-	despues de un par de semanas con la computadora deshabilitada se reanuda el proyecto
+	Despues de un par de semanas con la computadora deshabilitada se reanuda el proyecto
 
 11:49 p. m. 22/10/2019
-	completado el control de comic, generando un tile por cada carpeta/archivo
+	Completado el control de comic, generando un tile por cada carpeta/archivo
 	ERROR se recibe una anchura superior a la que se asigno en propiedades por lo tanto los tiles estan mal
 
 12:31 a. m. 23/10/2019
-	creo haber reparado el error, estoy cansado, mañana seguire intentando o al menos lo parcheare
+	Creo haber reparado el error, estoy cansado, mañana seguire intentando o al menos lo parcheare
 
+08:00 p. m. 23/10/2019
+	El problema de los tiles fallidos ha sido reparado
+	Es neceseraio un formulario para agregar directorios
+	Agregado un MessageBox en caso de que la categoria seleccionada este vacia, convertirlo a funcion externa para no agregarlo en cada boton

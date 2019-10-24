@@ -24,6 +24,7 @@ namespace Elements
         {
             //timer1.Start();
             timer2.Start();
+            Console.WriteLine("MP Size {0}", this.Size);
         }
 
 
@@ -85,15 +86,25 @@ namespace Elements
         private void tileComic_Click(object sender, EventArgs e)
         {
             //check metro UserControl
-            if (!Form1.Instance.MetroContainer.Controls.ContainsKey("ComicControl"))
+            if (Contenido.DirMap["Comic"].Count <= 0)
             {
-                ComicControl ComicCtrl = new ComicControl();
-                ComicCtrl.Dock = DockStyle.Fill;
-                //Add UserControl to Metro Panel
-                Form1.Instance.MetroContainer.Controls.Add(ComicCtrl);
+                DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
+                {
+                    Contenido.AddtoDir("Comic", "C:/Users/JuanEnrique/Google Drive/comic");
+                }
             }
-            Form1.Instance.MetroContainer.Controls["ComicControl"].BringToFront();
-            Form1.Instance.metroBack.Visible = true;
+            else {
+                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("ComicControl"))
+                {
+                    ComicControl ComicCtrl = new ComicControl();
+                    ComicCtrl.Dock = DockStyle.Fill;
+                    //Add UserControl to Metro Panel
+                    Form1.Instance.MetroContainer.Controls.Add(ComicCtrl);
+                }
+                Form1.Instance.MetroContainer.Controls["ComicControl"].BringToFront();
+                Form1.Instance.metroBack.Visible = true;
+            }
         }
     }
 }

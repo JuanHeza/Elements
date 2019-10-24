@@ -42,11 +42,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CausesValidation = false;
-            this.MinimumSize = new System.Drawing.Size(71, 460);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.MinimumSize = new System.Drawing.Size(71, 52);
             this.Name = "ComicControl";
-            this.Size = new System.Drawing.Size(710, 460);
+            this.Size = new System.Drawing.Size(710, 520);
             this.Style = MetroFramework.MetroColorStyle.Blue;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.ComicControl_Load);
