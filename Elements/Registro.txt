@@ -19,3 +19,13 @@
 	El problema de los tiles fallidos ha sido reparado
 	Es neceseraio un formulario para agregar directorios
 	Agregado un MessageBox en caso de que la categoria seleccionada este vacia, convertirlo a funcion externa para no agregarlo en cada boton
+
+05:40 p. m. 02/11/2019
+	odio que mi computadora este fallando tanto ultimamente pero bueno, necesito volver a trabajar
+la mision de hoy es terminar la seccion de biblioteca de comic para ppoder pasar al visor que no deberia dar mucho problema en primera instancia, si las cosas fluyen rapido pasare directo a la seccion de musica una vez terminado el visor
+
+10:40 p. m. 02/11/2019
+	pues es algo dificil trabajar con bishop fallando la pantalla y alentandose de vez en vez, modifique cosas en el grid del comic, aun falta un pequeño detalle de omitir carpetas sin archivos validos y las  portadas pero para eso quiero usar un "live tile"
+
+11:25 p. m. 04/11/2019
+	hoy no puse entrada al inicio del turno pero trabaje relativamente poco, solo arregle las portadas y ya esta, hay un pequeño error de que dejan parte del marco y segun la portada y el tile son del mismo tamaño, hay que ver eso, tambien hay que manejar los tiles con hilos porque me da picos de consumo de memoria de 20 a 250 mn, bastante y el tiempo  es demasiado lento, asi que toca meter hilos, para cuando trabaje el lector tambien metere hillos

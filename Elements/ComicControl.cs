@@ -26,6 +26,7 @@ namespace Elements
         {
             Console.WriteLine("Dirmap Comic {0}", Contenido.DirMap["Comic"].Count);
             TilesCreate();
+            Comic.openArchive("C:/Users/JuanEnrique/Google Drive/comic/The Amazing Spider-Man Vol 3 #3.cbr");
             timer1.Start();
         }
 
@@ -48,13 +49,24 @@ namespace Elements
                     //Console.WriteLine("\t\t\tBEEP Pos = {0} Size = ( {1} , {2} )", posX, sz, (int)(sz * 1.5));
                     MetroFramework.Controls.MetroTile X = new MetroFramework.Controls.MetroTile();
                     X.Location = new System.Drawing.Point(posX, posY);
-                    X.Text = hijo.Nombre;
+                    X.Text = hijo.Nombre.Replace(DR,"");
                     X.Name = hijo.Nombre;
                     X.Style = MetroFramework.MetroColorStyle.Green;
                     X.Size = new System.Drawing.Size(sz, (int)(sz * 1.5));
                     X.MinimumSize = new System.Drawing.Size(120, 180);
                     X.ActiveControl = null;
                     X.Visible = true;
+                    if (hijo.IsDir)
+                    {
+                        X.Style = MetroColorStyle.Magenta;
+                    }
+                    else
+                    { 
+                        X.Style = MetroColorStyle.Green;
+                        X.TileImage = Comic.GetThumb(hijo.Nombre,sz, (int)(sz * 1.5));
+                        X.UseTileImage = true;
+
+                    }
                     this.Controls.Add(X);
                     this.Refresh();
                     fila++;

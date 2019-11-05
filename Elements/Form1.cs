@@ -55,7 +55,7 @@ namespace Elements
         {
             metroBack.Visible = false;
             timer1.Start();
-            Console.WriteLine("Form1 Size {0}", this.Size);
+            //Console.WriteLine("Form1 Size {0}", this.Size);
             _instance = this;
             MainPage MP = new MainPage();
             MP.Dock = DockStyle.Fill;

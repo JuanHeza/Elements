@@ -24,7 +24,7 @@ namespace Elements
         {
             //timer1.Start();
             timer2.Start();
-            Console.WriteLine("MP Size {0}", this.Size);
+            //Console.WriteLine("MP Size {0}", this.Size);
         }
 
 
@@ -91,7 +91,7 @@ namespace Elements
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 if (result == DialogResult.Yes)
                 {
-                    Contenido.AddtoDir("Comic", "C:/Users/JuanEnrique/Google Drive/comic");
+                    Contenido.AddtoDir("Comic", "C:/Users/JuanEnrique/Google Drive/comic/");
                 }
             }
             else {

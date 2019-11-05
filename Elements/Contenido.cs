@@ -14,6 +14,7 @@ namespace Elements
         public Contenido Padre { get; set; }
         public List<Contenido> Hijo { get; set; }
         public string Nombre { get; set; }
+        public bool IsDir { get; set;}
 
         public Contenido(string nombre)
         {
@@ -36,23 +37,33 @@ namespace Elements
             List<Contenido> valor = new List<Contenido>();
             string thumb;
             Console.WriteLine("\t=== Simulacro Iniciando ===");
+            //Console.WriteLine("\t&{0} &{1}", files.Count, dirs.Count);
             dirs.AddRange(Directory.GetDirectories(this.Nombre));
-            dirs.Sort();
+            //dirs.Sort();
             foreach (string dir in dirs)
             {
                 Contenido aux = new Contenido(dir);
                 aux.Padre = this;
-                Console.WriteLine("\t#" + dir);
+                //Console.WriteLine("\t#" + dir);
                 files = GetComic(dir);
                 if (files.Count() < 1)
                 {
                     thumb = "def";
+                    continue;
                 }
                 else
                 {
                     thumb = "\t\t" + files[0];
                 }
-                Console.WriteLine(thumb);
+                aux.IsDir = true;
+                valor.Add(aux);
+            }
+            files = GetComic(this.Nombre);
+            foreach (string file in files)
+            {
+                Contenido aux = new Contenido(file);
+                aux.Padre = this;
+                aux.IsDir = false;
                 valor.Add(aux);
             }
             this.Hijo = valor;
