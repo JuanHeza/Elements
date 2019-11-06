@@ -18,15 +18,6 @@ namespace Elements
             try
             {
                 archive = ArchiveFactory.Open(filename);
-                /*
-                foreach (IArchiveEntry entry in archive.Entries)
-                {
-                    if (!entry.IsDirectory)
-                    {
-                        Console.WriteLine(entry.Key);
-                    }
-                }
-                */
             return archive;
             }
             catch (InvalidOperationException ioe)
@@ -47,8 +38,6 @@ namespace Elements
                 {
                     try
                     {
-                        Console.WriteLine(AZ.Key);
-                        System.Threading.Thread.Sleep(5000);
                         Img = (Bitmap)Bitmap.FromStream(AZ.OpenEntryStream());
                         break;
                     }
@@ -59,7 +48,7 @@ namespace Elements
                     }
                 }
             }
-            return Img.GetThumbnailImage(Wd, Ht, null, IntPtr.Zero); ;
+            return Img.GetThumbnailImage(Wd, Ht, null, IntPtr.Zero); 
         }
     }
 }

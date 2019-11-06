@@ -29,3 +29,11 @@ la mision de hoy es terminar la seccion de biblioteca de comic para ppoder pasar
 
 11:25 p. m. 04/11/2019
 	hoy no puse entrada al inicio del turno pero trabaje relativamente poco, solo arregle las portadas y ya esta, hay un pequeño error de que dejan parte del marco y segun la portada y el tile son del mismo tamaño, hay que ver eso, tambien hay que manejar los tiles con hilos porque me da picos de consumo de memoria de 20 a 250 mn, bastante y el tiempo  es demasiado lento, asi que toca meter hilos, para cuando trabaje el lector tambien metere hillos
+
+03:52 p. m. 05/11/2019
+	repare un pequeño fallo pero aun debo implementar hilos para reducir tiempos, al parecer la implementacion es similar a go, eso es fantastico solo debo modificar un poco la creacion del tile
+
+11:01 p. m. 05/11/2019
+	hilos implementados, falta quitar el timer que controla la actualizacion de tamaño y posicion, hay que cambiarlo por un sizechanged para qque se actualice cuando sea necesario y no siempre, mañana agrego lo de abrir carpetas y se limpie el grid para mostrar lo que contiene esa carpeta, tal vez para ahorrar problemas lo abra directamente en modo pantalla completa.
+el fin de semana actualizo el github para que este el comic control a un 70%
+

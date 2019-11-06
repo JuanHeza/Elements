@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -15,18 +16,23 @@ namespace Elements
 {
     public partial class ComicControl : MetroFramework.Controls.MetroUserControl
     {
+        System.Threading.Semaphore Sem;
+        static int sepY = 20;
+        List<MetroFramework.Controls.MetroTile> Teselas = new List<MetroFramework.Controls.MetroTile>();
+        int Min = 6;
+        int Max = 9;
         public ComicControl()
         {
             InitializeComponent();
         }
 
-        List<MetroFramework.Controls.MetroTile> Teselas = new List<MetroFramework.Controls.MetroTile>();
 
         private void ComicControl_Load(object sender, EventArgs e)
         {
             Console.WriteLine("Dirmap Comic {0}", Contenido.DirMap["Comic"].Count);
+            Sem = new System.Threading.Semaphore(Min, Min);
             TilesCreate();
-            Comic.openArchive("C:/Users/JuanEnrique/Google Drive/comic/The Amazing Spider-Man Vol 3 #3.cbr");
+            Form1.ModStyle("Green");
             timer1.Start();
         }
 
@@ -34,74 +40,82 @@ namespace Elements
             foreach (string DR in Contenido.DirMap["Comic"]) { 
                 Contenido cont = new Contenido(DR);
                 cont.GetContent();
-                int num = 6; // N + 1 donde N son los cuadros por fila, numero variable, fijo para pruebas
-                Form1.ModStyle("Green");
-                int Wdh = Form1.ControlSize.Width;
-                int sz = Wdh / num;
-                int sepX = (sz + (Wdh % num)) / num;
-                int posX = sepX;
-                int fila = 0;
-                int sepY = 20;
-                int posY = sepY;
-            
+                int index = -1;
                 foreach (Contenido hijo in cont.Hijo)
                 {
-                    //Console.WriteLine("\t\t\tBEEP Pos = {0} Size = ( {1} , {2} )", posX, sz, (int)(sz * 1.5));
                     MetroFramework.Controls.MetroTile X = new MetroFramework.Controls.MetroTile();
-                    X.Location = new System.Drawing.Point(posX, posY);
-                    X.Text = hijo.Nombre.Replace(DR,"");
+                    X.Text = hijo.Nombre.Replace(DR, "");
                     X.Name = hijo.Nombre;
-                    X.Style = MetroFramework.MetroColorStyle.Green;
-                    X.Size = new System.Drawing.Size(sz, (int)(sz * 1.5));
+                    X.Style = MetroFramework.MetroColorStyle.Magenta;
                     X.MinimumSize = new System.Drawing.Size(120, 180);
+                    X.MaximumSize = new System.Drawing.Size(200, 300);
                     X.ActiveControl = null;
                     X.Visible = true;
-                    if (hijo.IsDir)
-                    {
-                        X.Style = MetroColorStyle.Magenta;
-                    }
-                    else
-                    { 
-                        X.Style = MetroColorStyle.Green;
-                        X.TileImage = Comic.GetThumb(hijo.Nombre,sz, (int)(sz * 1.5));
-                        X.UseTileImage = true;
-
-                    }
-                    this.Controls.Add(X);
-                    this.Refresh();
-                    fila++;
-                    if (fila >= num - 1)
-                    {
-                        fila = 0;
-                        posY += sepY + (int)(sz * 1.5);
-                        posX = sepX;
-                    }
-                    else { 
-                        posX += sepX + sz;
-                    }
-                    Teselas.Add(X);
+                    X.TabIndex = ++index;
+                    new Thread(() => TilesGrid(hijo.IsDir, Min-1, X,false)).Start();
                 }
+                
+                while (Teselas.Count < cont.Hijo.Count)
+                {
+                    Thread.Sleep(100);
+                }
+                foreach (MetroFramework.Controls.MetroTile Tesela in Teselas)
+                {
+                    this.Controls.Add(Tesela);
+                }
+                this.Refresh();
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Size = Form1.ControlSize;
-            int NewWidth = 120;
-            Image originalImage = global::Elements.Properties.Resources.What_If___Spider_Man_House_Of_M_Vol_1;
-            Image thumbnail = originalImage.GetThumbnailImage(NewWidth, (NewWidth * originalImage.Height) / originalImage.Width, null, IntPtr.Zero);
-            //X.TileImage = thumbnail;
-            //X.UseTileImage = true;
-            //X.Text = thumbnail.Size.Width.ToString() + "," + thumbnail.Size.Height .ToString();
-            
+            if (Teselas.Count < 1)
+            {
+                Console.WriteLine("NO HAY TESELAS");
+            }
+            else
+            {
+                foreach (MetroFramework.Controls.MetroTile Tesela in Teselas)
+                {
+                    bool dir = Tesela.Style == MetroFramework.MetroColorStyle.Magenta;
+                    if (!dir)
+                    {
+                        Tesela.TileImage = Tesela.TileImage.GetThumbnailImage(Tesela.Size.Width,Tesela.Size.Height, null, IntPtr.Zero);
+                    }
+                    TilesGrid(dir, 5, Tesela, true);
+                }
+            }
             this.Refresh();
         }
 
-        private List<MetroFramework.Controls.MetroTile> TilesGrid()
+        private MetroFramework.Controls.MetroTile TilesGrid(bool IsDir, int N, MetroFramework.Controls.MetroTile X, bool Update)
         {
-            List<MetroFramework.Controls.MetroTile> Tiles = new List<MetroFramework.Controls.MetroTile>();
-
-            return Tiles;
+            Sem.WaitOne();
+            int Wdh = Form1.ControlSize.Width;
+            int sz = Wdh / N;
+            while (sz > X.MaximumSize.Width)
+            {
+                N++;
+                sz = Wdh / N;
+            }
+            int SX = (sz + (Wdh % N)) / N;
+            int SY = ComicControl.sepY;
+            X.Size = new System.Drawing.Size(sz, (int)(sz * 1.5));
+            int LocX = (SX * (1 + (X.TabIndex % N))) + (sz * (X.TabIndex % N));
+            int LocY = (SY * (1 + (X.TabIndex / N))) + ((int)(sz * 1.5) * (X.TabIndex / N));
+            X.Location = new System.Drawing.Point(LocX, LocY);
+            Console.WriteLine("\tTile Index {0}\tLocation {1}\tLocation {2}\tLocX {3}\tLocY {4}", X.TabIndex, X.Size, X.Location, X.TabIndex % N, X.TabIndex / N);
+            if(!Update){
+                if (!IsDir)
+                {
+                    X.Style = MetroColorStyle.Green;
+                    X.TileImage = Comic.GetThumb(X.Name, X.Size.Width, X.Size.Height);
+                    X.UseTileImage = true;
+                }
+                Teselas.Add(X);
+            }
+            Sem.Release();
+            return X;
         }
     }
 }
