@@ -14,11 +14,21 @@ namespace Elements
         public Contenido Padre { get; set; }
         public List<Contenido> Hijo { get; set; }
         public string Nombre { get; set; }
-        public bool IsDir { get; set;}
-
+        public bool IsDir { get; set; }
         public Contenido(string nombre)
         {
             Nombre = nombre;
+        }
+
+        public static List<Contenido> ComicCont
+        {
+            set;
+            get;
+        }
+
+        public static void InitComicCont()
+        {
+            ComicCont = new List<Contenido>(); 
         }
 
         public static List<string> GetComic(string x)
@@ -97,5 +107,24 @@ namespace Elements
             */
             return "";
         }
+
+        public static void agregarComicDirs(Contenido D)
+        {
+            bool Exist = false;
+            foreach(Contenido x in ComicCont)
+            {
+                if (D.Nombre == x.Nombre)
+                {
+                    Exist = true;
+                    break;
+                }
+            }
+            if (!Exist)
+            {
+                ComicCont.Add(D);
+            }
+        }
+
+
     }
 }

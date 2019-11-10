@@ -37,3 +37,6 @@ la mision de hoy es terminar la seccion de biblioteca de comic para ppoder pasar
 	hilos implementados, falta quitar el timer que controla la actualizacion de tamaño y posicion, hay que cambiarlo por un sizechanged para qque se actualice cuando sea necesario y no siempre, mañana agrego lo de abrir carpetas y se limpie el grid para mostrar lo que contiene esa carpeta, tal vez para ahorrar problemas lo abra directamente en modo pantalla completa.
 el fin de semana actualizo el github para que este el comic control a un 70%
 
+11:59 p. m. 09/11/2019
+	finalmente el comic control esta completo, solo falta agregar un boton back para pasar de una carpeta hijo a carpeta padre, probablemente use el mismo boton back, y agrege un boton home para ir directo al inicio y que este haga "Disponse" de la ventana activa para que no ocupe nada
+SIDENOTE Bishop esta totalmente reparada, ya puedo volver a tarabajar como antes

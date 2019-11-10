@@ -86,6 +86,7 @@ namespace Elements
         private void tileComic_Click(object sender, EventArgs e)
         {
             //check metro UserControl
+            Console.WriteLine("Click Comic");
             if (Contenido.DirMap["Comic"].Count <= 0)
             {
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);

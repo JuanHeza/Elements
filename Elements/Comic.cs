@@ -50,5 +50,8 @@ namespace Elements
             }
             return Img.GetThumbnailImage(Wd, Ht, null, IntPtr.Zero); 
         }
+
+
+
     }
 }
