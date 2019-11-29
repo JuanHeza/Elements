@@ -11,6 +11,11 @@ namespace Elements
 {
     public class Comic
     {
+        public Image Portada;
+        public List<Image> Paginas = new List<Image>();
+        public string Titulo;
+        public String Anterior;
+        public String Siguiente;
 
         public static IArchive openArchive(String filename)
         {
@@ -34,12 +39,12 @@ namespace Elements
             IArchive archive = openArchive(dir);
             foreach (IArchiveEntry AZ in archive.Entries)
             {
-                if (!AZ.IsDirectory && !AZ.Key.ToLower().Contains("txt"))
+                if (!AZ.IsDirectory && AZ.Key.ToLower().Contains("jpg") || !AZ.IsDirectory && AZ.Key.ToLower().Contains("png"))
                 {
                     try
                     {
                         Img = (Bitmap)Bitmap.FromStream(AZ.OpenEntryStream());
-                        break;
+                        return Img.GetThumbnailImage(Wd, Ht, null, IntPtr.Zero);
                     }
                     catch (InvalidOperationException ioe)
                     {
@@ -48,10 +53,34 @@ namespace Elements
                     }
                 }
             }
-            return Img.GetThumbnailImage(Wd, Ht, null, IntPtr.Zero); 
+            return Img.GetThumbnailImage(Wd, Ht, null, IntPtr.Zero);
         }
 
+        public Comic(Contenido File, List<string> Bros)
+        {
+            Titulo = File.Nombre.Replace(File.Padre.Nombre, "");
+            Siguiente = Bros[1];
+            Anterior = Bros[0];
 
+            IArchive archive = openArchive(File.Nombre);
+                        
+            foreach (IArchiveEntry AZ in archive.Entries)
+            {
+                if (!AZ.IsDirectory && AZ.Key.ToLower().Contains("jpg") || !AZ.IsDirectory && AZ.Key.ToLower().Contains("png"))
+                {
+                    try
+                    {
+                        Paginas.Add((Bitmap)Bitmap.FromStream(AZ.OpenEntryStream()));
+                    }
+                    catch (InvalidOperationException ioe)
+                    {
+                        Console.WriteLine("Error opening file" + ioe.Message);
+                        break;
+                    }
+                }
+            }
+            Portada = Paginas[0];
+        }
 
     }
 }

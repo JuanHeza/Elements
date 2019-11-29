@@ -23,7 +23,7 @@ namespace Elements
                 foreach (var item in dbList)
                 {
                     Console.WriteLine(item);
-                    Form1.Instance.metroBack.Text = item.ToString();
+                    Form1.Instance.metroHome.Text = item.ToString();
                 }
 
                 Console.WriteLine("\n\n");

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Elements
 {
-    class Contenido
+    public class Contenido
     {
         public static Dictionary<string, List<String>> DirMap = new Dictionary<string, List<String>>();
         public Contenido Padre { get; set; }
@@ -45,18 +45,16 @@ namespace Elements
             List<string> files = new List<string>();
             List<string> dirs = new List<string>();
             List<Contenido> valor = new List<Contenido>();
-            string thumb;
+            //string thumb;
             Console.WriteLine("\t=== Simulacro Iniciando ===");
-            //Console.WriteLine("\t&{0} &{1}", files.Count, dirs.Count);
             dirs.AddRange(Directory.GetDirectories(this.Nombre));
             //dirs.Sort();
             foreach (string dir in dirs)
             {
                 Contenido aux = new Contenido(dir);
                 aux.Padre = this;
-                //Console.WriteLine("\t#" + dir);
                 files = GetComic(dir);
-                if (files.Count() < 1)
+                /*if (files.Count() < 1)
                 {
                     thumb = "def";
                     continue;
@@ -64,7 +62,7 @@ namespace Elements
                 else
                 {
                     thumb = "\t\t" + files[0];
-                }
+                }*/
                 aux.IsDir = true;
                 valor.Add(aux);
             }
@@ -124,7 +122,5 @@ namespace Elements
                 ComicCont.Add(D);
             }
         }
-
-
     }
 }

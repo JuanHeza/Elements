@@ -17,7 +17,7 @@ namespace Elements
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         public static Form1 _instance;
-        public static System.Drawing.Size ControlSize; 
+        public static System.Drawing.Size ControlSize;
         public static Form1 Instance
         {
             get
@@ -27,23 +27,23 @@ namespace Elements
                 return _instance;
             }
         }
+        public static Contenido actualFolder;
 
         public MetroFramework.Controls.MetroPanel MetroContainer
         {
             get { return metroPanel1; }
             set { metroPanel1 = value; }
         }
-
-        public MetroFramework.Controls.MetroLink MetroBack
+        public MetroFramework.Controls.MetroPanel MetroUserReader
         {
-            get { return metroBack; }
-            set { metroBack = value; }
+            get { return UserReader; }
+            set { UserReader = value; }
         }
         /*
-        public static object DirMap1
+        public MetroFramework.Controls.MetroLink MetroHome
         {
-            get {   return DirMap;  }
-            set {   DirMap = value; }
+            get { return metroHome; }
+            set { metroHome = value; }
         }
         */
         public Form1()
@@ -53,9 +53,6 @@ namespace Elements
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            metroBack.Visible = false;
-            timer1.Start();
-            //Console.WriteLine("Form1 Size {0}", this.Size);
             _instance = this;
             MainPage MP = new MainPage();
             MP.Dock = DockStyle.Fill;
@@ -63,31 +60,53 @@ namespace Elements
             Contenido.InitDir();
         }
 
-        private void metroBack_Click(object sender, EventArgs e)
+        private void metroHome_Click(object sender, EventArgs e)
         {
             //MetroMessageBox.Show(this, "Your message here.", "Title Here", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
             metroPanel1.Controls["MainPage"].BringToFront();
-            metroBack.Visible = false;
+            metroPanel1.Controls.RemoveAt(1);
+            metroHome.Visible = false;
+            Form1._instance.Style = MetroFramework.MetroColorStyle.Silver;
         }
 
-        public static void ModStyle(string style)
+        private void metroPanel1_SizeChanged(object sender, EventArgs e)
         {
-            switch (style)
+        }
+
+        private void metroBack_Click(object sender, EventArgs e)
+        {
+            rootFolder(); 
+            visualBack();
+        }
+
+        private void rootFolder()
+        {
+            Contenido Root = actualFolder.Padre;
+            Control X = metroPanel1.Controls[0];
+            switch (X.ToString())
             {
-                case "Green":
-                    _instance.Style = MetroFramework.MetroColorStyle.Green;
-                    _instance.Refresh();
-                    break;
-                default:
-                    _instance.Style = MetroFramework.MetroColorStyle.Blue;
+                case "Elements.ComicControl":
+                    ComicControl cmcctrl = (ComicControl)X;
+                    cmcctrl.TilesDestroy();
+                    cmcctrl.TilesCreate(Root);
                     break;
             }
+            actualFolder = Root;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        public static void visualBack()
         {
-            ControlSize = new System.Drawing.Size(this.Size.Width, (int)(this.Size.Height * 0.88));
-            this.metroPanel1.Size = ControlSize;
+            if (actualFolder != null)
+            {
+                if (actualFolder.Padre != null)
+                {
+                   _instance.metroBack.Visible = true;
+                }
+                else
+                {
+                   _instance.metroBack.Visible = false;
+                }
+            }
         }
     }
 }

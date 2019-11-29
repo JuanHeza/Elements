@@ -113,6 +113,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comic.cs" />
+    <Compile Include="ComicReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComicReader.Designer.cs">
+      <DependentUpon>ComicReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigControl.Designer.cs">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contenido.cs" />
     <Compile Include="Mongo.cs" />
     <Compile Include="Form1.cs">
@@ -120,6 +132,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notable.Designer.cs">
+      <DependentUpon>Notable.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,8 +162,17 @@
     <EmbeddedResource Include="ComicControl.resx">
       <DependentUpon>ComicControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComicReader.resx">
+      <DependentUpon>ComicReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigControl.resx">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notable.resx">
+      <DependentUpon>Notable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -180,6 +207,20 @@
   <ItemGroup>
     <Content Include="59.ico" />
     <Content Include="Registro.txt" />
+    <None Include="Resources\ST.png" />
+    <None Include="Resources\Imagen3.png" />
+    <None Include="Resources\59.png" />
+    <None Include="Resources\icons8-cabaña-64.png" />
+    <None Include="Resources\icons8-izquierda-en-círculo-2-64.png" />
+    <None Include="Resources\icons8-izquierda-en-círculo-2-50.png" />
+    <None Include="Resources\icons8-girar-64.png" />
+    <None Include="Resources\icons8-derecha-círculo-64.png" />
+    <None Include="Resources\icons8-cucha-50.png" />
+    <None Include="Resources\icons8-chevron-izquierda-en-círculo-64.png" />
+    <None Include="Resources\icons8-chevron-derecha-en-círculo-64.png" />
+    <None Include="Resources\icons8-arriba-círculo-64.png" />
+    <None Include="Resources\icons8-abajo-círculo-64.png" />
+    <None Include="Resources\EKZ0HhiUEAAr7k9.jpg" />
     <None Include="Resources\Young Justice.jpg" />
     <None Include="Resources\Y El último hombre.jpg" />
     <None Include="Resources\X-Men Phoenix Legacy Of Fire Vol 1.jpg" />

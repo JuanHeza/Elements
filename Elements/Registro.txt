@@ -40,3 +40,16 @@ el fin de semana actualizo el github para que este el comic control a un 70%
 11:59 p. m. 09/11/2019
 	finalmente el comic control esta completo, solo falta agregar un boton back para pasar de una carpeta hijo a carpeta padre, probablemente use el mismo boton back, y agrege un boton home para ir directo al inicio y que este haga "Disponse" de la ventana activa para que no ocupe nada
 SIDENOTE Bishop esta totalmente reparada, ya puedo volver a tarabajar como antes
+
+01:58 p. m. 28/11/2019
+	<a target="_blank" href="/icons/set/circled-chevron-right">Chevron derecha en círculo icon</a> icon by <a target="_blank" href="https://iconos8.es">Icons8</a>
+no olvides incluir eso como datos de los iconos
+
+07:27 p. m. 28/11/2019
+	el lector de comic esta a un 70%, hay que mejorar los tiempos de carga al entrar pero eso necesito una base de datos o un archivo de configuraciones asi que esa sera la siguiente seccion a preparar
+hay que hacer unas modificaciones en la clase contenido para enlazar con el archivo siguiente y archivo anterior, probablemente deje algo preparado para cuando lo necesite pero hay que revisar
+hoy fue una jornada larga por lo que parece pero bueno, a maquetear las configuraciones
+
+09:36 p. m. 28/11/2019
+	panel configuracion esta a un 30% falta agregar muchas cosas pero va bien
+fin de la jornada

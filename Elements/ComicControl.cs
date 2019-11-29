@@ -21,7 +21,6 @@ namespace Elements
         List<MetroFramework.Controls.MetroTile> Teselas = new List<MetroFramework.Controls.MetroTile>();
         int Min = 6;
         int Max = 9;
-        String ActiveDir = "";
         public ComicControl()
         {
             InitializeComponent();
@@ -29,19 +28,21 @@ namespace Elements
 
         private void ComicControl_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Dirmap Comic {0}", Contenido.DirMap["Comic"].Count);
+            //Console.WriteLine("Dirmap Comic {0}", Contenido.DirMap["Comic"].Count);
             Contenido.InitComicCont();
             Sem = new System.Threading.Semaphore(Min, Min);
             foreach (string DR in Contenido.DirMap["Comic"])
             {
-                TilesCreate(DR);
+
+                Contenido cont = new Contenido(DR);
+                TilesCreate(cont);
             }
-            Form1.ModStyle("Green");
         }
 
-        public void TilesCreate(string DR) { 
-            Contenido cont = new Contenido(DR);
-            Console.WriteLine("CREANDO TILES DE {0}", DR);
+        public void TilesCreate(Contenido cont) {
+            Form1.actualFolder = cont;
+            Form1.visualBack();
+            Console.WriteLine("CREANDO TILES DE {0}", cont.Nombre);
             Contenido.agregarComicDirs(cont);
             cont.GetContent();
             int index = -1;
@@ -49,7 +50,7 @@ namespace Elements
             {
                 Contenido.agregarComicDirs(hijo);
                 MetroFramework.Controls.MetroTile X = new MetroFramework.Controls.MetroTile();
-                X.Text = hijo.Nombre.Replace(DR, "");
+                X.Text = hijo.Nombre.Replace(cont.Nombre, "");
                 X.Name = hijo.Nombre;
                 X.Style = MetroFramework.MetroColorStyle.Magenta;
                 X.MinimumSize = new System.Drawing.Size(120, 180);
@@ -96,7 +97,6 @@ namespace Elements
             Sem.WaitOne();
             int Wdh = Form1.ControlSize.Width;
             int sz = Wdh / N;
-            //Console.WriteLine("SZ {0} \t WDH {1}", sz, Wdh);
             while (sz > X.MaximumSize.Width && N <= Max)
             {
                 N++;
@@ -108,7 +108,6 @@ namespace Elements
             int LocX = (SX * (1 + (X.TabIndex % (N - 1)))) + (sz * (X.TabIndex % (N - 1)));
             int LocY = (SY * (1 + (X.TabIndex / (N - 1)))) + ((int)(sz * 1.5) * (X.TabIndex / (N - 1)));
             X.Location = new System.Drawing.Point(LocX, LocY);
-            //Console.WriteLine("\tTile Index {0}\tSize {1}\tLocation {2}\tLocX {3}\tLocY {4}", X.TabIndex, X.Size, X.Location, X.TabIndex % (N - 1), X.TabIndex / (N - 1));
             if(!Update){
                 if (!IsDir)
                 {
@@ -129,16 +128,42 @@ namespace Elements
 
         private void Comic_Click(object sender, EventArgs e)
         {
-            string a = (sender as MetroFramework.Controls.MetroTile).Name;
+            var Q = (sender as MetroFramework.Controls.MetroTile);
+            string a = Q.Name;
             List<Contenido> Tsx = Contenido.ComicCont;
+            Contenido T = new Contenido ("");
             foreach(Contenido t in Tsx)
             {
                 if (t.Nombre == a)
                 {
-                    Console.WriteLine( "{0}\t{1}", t.Nombre,t.Padre.Nombre);
+                    T = t;
                     break;
                 }
             }
+            List<string> bros = new List<string>(); 
+            if (Q.TabIndex > 0)
+            {
+                bros.Add(this.Controls[Q.TabIndex-1].Name);
+            }
+            else
+            {
+                bros.Add("");
+            }
+
+            if(Q.TabIndex < this.Controls.Count)
+            {
+                bros.Add(this.Controls[Q.TabIndex+1].Name);
+            }
+            else
+            {
+                bros.Add("");
+            }
+
+            ComicReader ComicRDR = new ComicReader(Form1._instance.Width, Form1._instance.Height, T, bros);
+            ComicRDR.Dock = DockStyle.Fill;
+            //Add UserControl to Metro Panel
+            Form1._instance.MetroUserReader.Controls.Add(ComicRDR);
+            Form1._instance.MetroUserReader.Visible = true;
         }
 
         private void Carpeta_Click(object sender, EventArgs e)
@@ -146,28 +171,24 @@ namespace Elements
             List<Contenido> Tsx = Contenido.ComicCont;
             Contenido X;
             string a = (sender as MetroFramework.Controls.MetroTile).Name;
+            TilesDestroy();
             foreach (Contenido t in Tsx)
             {
                 if (t.Nombre == a)
                 {
                     X = t;
-                    Console.WriteLine("{0}\t{1}", X.Nombre, X.Padre);
+                    TilesCreate(X);
                     break;
                 }
             }
-            TilesDestroy();
-            String ActiveDir = a;
-            TilesCreate(a);
         }
 
-        private void TilesDestroy()
+        public void TilesDestroy()
         {
             Contenido.InitComicCont();
             this.Controls.Clear();
             this.Refresh();
             Teselas.Clear();
         }
-
-
     }
 }

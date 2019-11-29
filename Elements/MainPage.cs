@@ -22,11 +22,7 @@ namespace Elements
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-            //timer1.Start();
-            timer2.Start();
-            //Console.WriteLine("MP Size {0}", this.Size);
         }
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -57,7 +53,7 @@ namespace Elements
             metroStatus = !metroStatus;
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void UserControl1_SizeChanged(object sender, EventArgs e)
         {
             System.Drawing.Size a, c, b;
             Point d;
@@ -87,6 +83,7 @@ namespace Elements
         {
             //check metro UserControl
             Console.WriteLine("Click Comic");
+            Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
             if (Contenido.DirMap["Comic"].Count <= 0)
             {
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
@@ -104,8 +101,23 @@ namespace Elements
                     Form1.Instance.MetroContainer.Controls.Add(ComicCtrl);
                 }
                 Form1.Instance.MetroContainer.Controls["ComicControl"].BringToFront();
-                Form1.Instance.metroBack.Visible = true;
+                Form1.Instance.metroHome.Visible = true;
             }
+        }
+
+        private void tileOpciones_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Click Configuraciones");
+            Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
+            if (!Form1.Instance.MetroContainer.Controls.ContainsKey("ConfigControl"))
+            {
+                ConfigControl ConfigCtrl = new ConfigControl();
+                ConfigCtrl.Dock = DockStyle.Fill;
+                //Add UserControl to Metro Panel
+                Form1.Instance.MetroContainer.Controls.Add(ConfigCtrl);
+            }
+            Form1.Instance.MetroContainer.Controls["ConfigControl"].BringToFront();
+            Form1.Instance.metroHome.Visible = true;
         }
     }
 }

@@ -36,7 +36,6 @@
             this.tileNube = new MetroFramework.Controls.MetroTile();
             this.tileOpciones = new MetroFramework.Controls.MetroTile();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // tileComic
@@ -147,16 +146,12 @@
             this.tileOpciones.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.tileOpciones.UseSelectable = true;
             this.tileOpciones.UseStyleColors = true;
+            this.tileOpciones.Click += new System.EventHandler(this.tileOpciones_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // MainPage
             // 
@@ -178,6 +173,7 @@
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.UserControl1_Load);
+            this.SizeChanged += new System.EventHandler(this.UserControl1_SizeChanged);
             this.ResumeLayout(false);
 
         }
@@ -191,6 +187,5 @@
         private MetroFramework.Controls.MetroTile tileNube;
         private MetroFramework.Controls.MetroTile tileOpciones;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
     }
 }

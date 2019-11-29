@@ -29,3 +29,6 @@ C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\bin
 C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\Snappy.NET.xml
 C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\System.Buffers.xml
+C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.ComicReader.resources
+C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.Notable.resources
+C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.ConfigControl.resources

@@ -118,34 +118,76 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Secret Warriors Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Secret Warriors Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-arriba-círculo-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-arriba-círculo-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The Incal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Incal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The New 52 Futures End Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The New 52 Futures End Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-chevron-derecha-en-círculo-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-chevron-derecha-en-círculo-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="What If - Spider-Man House Of M Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\What If - Spider-Man House Of M Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="X-Campus Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\X-Campus Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="X-Men Millennial Visions Vol 1 2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\X-Men Millennial Visions Vol 1 2000.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="X-Men Millennial Visions Vol 1 2001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\X-Men Millennial Visions Vol 1 2001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="X-Men Phoenix Legacy Of Fire Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\X-Men Phoenix Legacy Of Fire Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Young Justice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Young Justice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Y El último hombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Y El último hombre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Young Justice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Young Justice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="X-Men Millennial Visions Vol 1 2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\X-Men Millennial Visions Vol 1 2000.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-chevron-izquierda-en-círculo-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-chevron-izquierda-en-círculo-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-cucha-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-cucha-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EKZ0HhiUEAAr7k9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EKZ0HhiUEAAr7k9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-derecha-círculo-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-derecha-círculo-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-girar-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-girar-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-izquierda-en-círculo-2-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-izquierda-en-círculo-2-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The New 52 Futures End Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The New 52 Futures End Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-cabaña-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-cabaña-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="X-Men Millennial Visions Vol 1 2001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\X-Men Millennial Visions Vol 1 2001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="What If - Spider-Man House Of M Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\What If - Spider-Man House Of M Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-izquierda-en-círculo-2-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-izquierda-en-círculo-2-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Secret Warriors Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Secret Warriors Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-abajo-círculo-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-abajo-círculo-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The Incal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Incal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="X-Campus Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\X-Campus Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="X-Men Phoenix Legacy Of Fire Vol 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\X-Men Phoenix Legacy Of Fire Vol 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imagen3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ST" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
