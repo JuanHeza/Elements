@@ -15,6 +15,7 @@ namespace Elements
     public partial class MainPage : MetroFramework.Controls.MetroUserControl
     {
         bool metroStatus = false;
+        public static string Filtro;
         public MainPage()
         {
             InitializeComponent();
@@ -84,6 +85,7 @@ namespace Elements
             //check metro UserControl
             Console.WriteLine("Click Comic");
             Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
+            MainPage.Filtro = "Comic"; 
             if (Contenido.DirMap["Comic"].Count <= 0)
             {
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
@@ -111,6 +113,7 @@ namespace Elements
             //check metro UserControl
             Console.WriteLine("Click Ebook");
             Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
+            MainPage.Filtro = "Ebook";
             if (Contenido.DirMap["Ebook"].Count <= 0)
             {
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
@@ -123,14 +126,16 @@ namespace Elements
             }
             else
             {
-                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("EbookControl"))
+                foreach (string dat in Contenido.DirMap["Ebook"])
+                    Console.WriteLine(dat);
+                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("ComicControl"))
                 {
                     ComicControl EbookCtrl = new ComicControl();
                     EbookCtrl.Dock = DockStyle.Fill;
                     //Add UserControl to Metro Panel
                     Form1.Instance.MetroContainer.Controls.Add(EbookCtrl);
                 }
-                Form1.Instance.MetroContainer.Controls["EbookControl"].BringToFront();
+                Form1.Instance.MetroContainer.Controls["ComicControl"].BringToFront();
                 Form1.Instance.metroHome.Visible = true;
             }
         }

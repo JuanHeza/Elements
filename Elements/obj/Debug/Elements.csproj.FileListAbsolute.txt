@@ -32,3 +32,4 @@ C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\bin
 C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.ComicReader.resources
 C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.Notable.resources
 C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\obj\Debug\Elements.ConfigControl.resources
+C:\Users\JuanEnrique\documents\visual studio 2015\Projects\Elements\Elements\bin\Debug\VersOne.Epub.dll

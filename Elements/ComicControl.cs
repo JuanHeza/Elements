@@ -21,6 +21,8 @@ namespace Elements
         List<MetroFramework.Controls.MetroTile> Teselas = new List<MetroFramework.Controls.MetroTile>();
         int Min = 6;
         int Max = 9;
+        string Filtro;
+
         public ComicControl()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace Elements
         {
             Contenido.InitComicCont();
             Sem = new System.Threading.Semaphore(Min, Min);
-            foreach (string DR in Contenido.DirMap["Comic"])
+            foreach (string DR in Contenido.DirMap[MainPage.Filtro])
             {
                 Contenido cont = new Contenido(DR);
                 TilesCreate(cont);
@@ -43,7 +45,7 @@ namespace Elements
             Console.WriteLine("CREANDO TILES DE {0}", cont.Nombre);
             Contenido.agregarComicDirs(cont);
             if (cont.Hijo.Count < 1)
-                cont.GetContent("Comic");
+                cont.GetContent(MainPage.Filtro);
             int index = -1;
             foreach (Contenido hijo in cont.Hijo)
             {
@@ -111,7 +113,19 @@ namespace Elements
                 if (!IsDir)
                 {
                     X.Style = MetroColorStyle.Green;
-                    X.TileImage = Comic.GetThumb(X.Name, X.Size.Width, X.Size.Height);
+                    switch (MainPage.Filtro)
+                    {
+                        case "Comic":
+                            X.TileImage = Comic.GetThumb(X.Name, X.Size.Width, X.Size.Height);
+                            break;
+                        case "Ebook":
+                            X.TileImage = Ebook.GetThumb(X.Name, X.Size.Width, X.Size.Height);
+                            break;
+                        default:
+                            Image coverImage = new Bitmap("C:/Users/JuanEnrique/documents/visual studio 2015/Projects/Elements/Elements/Resources/The Incal.jpg");
+                            X.TileImage = coverImage.GetThumbnailImage(X.Size.Width, X.Size.Height, null, IntPtr.Zero);
+                            break;
+                    }
                     X.UseTileImage = true;
                     X.Click += new System.EventHandler(Comic_Click);
                 }

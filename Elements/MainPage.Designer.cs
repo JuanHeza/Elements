@@ -110,6 +110,7 @@
             this.tileEbook.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.tileEbook.UseSelectable = true;
             this.tileEbook.UseStyleColors = true;
+            this.tileEbook.Click += new System.EventHandler(this.tileEbook_Click);
             // 
             // tileNube
             // 
