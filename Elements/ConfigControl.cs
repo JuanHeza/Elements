@@ -28,7 +28,7 @@ namespace Elements
         private void ComicConfig_Click(object sender, EventArgs e)
         {
             hidesubmenu();
-
+          //Mongo.Test();
         }
         #endregion
 

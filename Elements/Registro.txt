@@ -53,3 +53,16 @@ hoy fue una jornada larga por lo que parece pero bueno, a maquetear las configur
 09:36 p. m. 28/11/2019
 	panel configuracion esta a un 30% falta agregar muchas cosas pero va bien
 fin de la jornada
+
+10:19 p. m. 22/12/2019
+	las pruebas con mongo han ido bien, la integracion resulto un poco complicada por lo centrado que estaba el codigo en el uso de la memoria local y listas pero al sacar la funcion de listado de contenido a un archivo general puedo evitarme la modificacion de codigo y crear una funcion que me sirva para todas las areas sin problema, esa es la tarea de hoy :)
+tiempo aproximado, 40 min
+
+11:13 p. m. 22/12/2019
+	testeando la funcion con integracion a mongo, si funciona me reducira un poco la cargga, tal vez deba agregar el tipo de archivos que almacena para directamente de contenido saber a que tabla moverme
+
+11:29 p. m. 22/12/2019 
+	el codigo no esta funcionando por un valor de prueba "pato", moraleja eliminar los valores de prueba
+
+01:07 a. m. 23/12/2019
+	pues ha funcionado el codigo, despues de unas adaptaciones esta a un 80% en cuestiion de usabilidad, falta generar consultas pero hay tiempo, tristemente las tiles se desacomodaron asi que lo debo corregir y cambiar GetComic a GetByFilter

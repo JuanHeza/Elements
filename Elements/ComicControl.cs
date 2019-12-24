@@ -28,12 +28,10 @@ namespace Elements
 
         private void ComicControl_Load(object sender, EventArgs e)
         {
-            //Console.WriteLine("Dirmap Comic {0}", Contenido.DirMap["Comic"].Count);
             Contenido.InitComicCont();
             Sem = new System.Threading.Semaphore(Min, Min);
             foreach (string DR in Contenido.DirMap["Comic"])
             {
-
                 Contenido cont = new Contenido(DR);
                 TilesCreate(cont);
             }
@@ -44,7 +42,8 @@ namespace Elements
             Form1.visualBack();
             Console.WriteLine("CREANDO TILES DE {0}", cont.Nombre);
             Contenido.agregarComicDirs(cont);
-            cont.GetContent();
+            if (cont.Hijo.Count < 1)
+                cont.GetContent("Comic");
             int index = -1;
             foreach (Contenido hijo in cont.Hijo)
             {
@@ -95,7 +94,7 @@ namespace Elements
         private MetroFramework.Controls.MetroTile TilesGrid(bool IsDir, int N, MetroFramework.Controls.MetroTile X, bool Update)
         {
             Sem.WaitOne();
-            int Wdh = Form1.ControlSize.Width;
+            int Wdh = this.Width;
             int sz = Wdh / N;
             while (sz > X.MaximumSize.Width && N <= Max)
             {

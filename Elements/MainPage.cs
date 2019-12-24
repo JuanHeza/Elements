@@ -89,10 +89,11 @@ namespace Elements
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 if (result == DialogResult.Yes)
                 {
-                    Contenido.AddtoDir("Comic", "C:/Users/JuanEnrique/Google Drive/comic/");
+                    Mongo.AddPath("Comic", "C:/Users/JuanEnrique/Google Drive/comic/");
                 }
             }
-            else {
+            else
+            {
                 if (!Form1.Instance.MetroContainer.Controls.ContainsKey("ComicControl"))
                 {
                     ComicControl ComicCtrl = new ComicControl();
@@ -101,6 +102,35 @@ namespace Elements
                     Form1.Instance.MetroContainer.Controls.Add(ComicCtrl);
                 }
                 Form1.Instance.MetroContainer.Controls["ComicControl"].BringToFront();
+                Form1.Instance.metroHome.Visible = true;
+            }
+        }
+
+        private void tileEbook_Click(object sender, EventArgs e)
+        {
+            //check metro UserControl
+            Console.WriteLine("Click Ebook");
+            Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
+            if (Contenido.DirMap["Ebook"].Count <= 0)
+            {
+                DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
+                {
+                    //////////////////////////////////////////////
+                    Mongo.AddPath("Ebook", "C:/Users/JuanEnrique/Desktop/DAKOTA/Library");
+                    //////////////////////////////////////////////
+                }
+            }
+            else
+            {
+                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("EbookControl"))
+                {
+                    ComicControl EbookCtrl = new ComicControl();
+                    EbookCtrl.Dock = DockStyle.Fill;
+                    //Add UserControl to Metro Panel
+                    Form1.Instance.MetroContainer.Controls.Add(EbookCtrl);
+                }
+                Form1.Instance.MetroContainer.Controls["EbookControl"].BringToFront();
                 Form1.Instance.metroHome.Visible = true;
             }
         }

@@ -37,6 +37,10 @@ namespace Elements
                 this.BackgroundImage = ActualFile.Paginas[ProgressBar.Value - 1];
             }
         }
+        private void SetCover(object sender, EventArgs e)
+        {
+            Mongo.UpdateCover(ActualFile.Titulo, ActualFile.Paginas[ProgressBar.Value - 1]);
+        }
 
         private void Atras_Click(object sender, EventArgs e)
         {

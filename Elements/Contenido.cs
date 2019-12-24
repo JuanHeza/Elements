@@ -1,4 +1,5 @@
 ﻿using System;
+using MongoDB.Bson;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.IO;
@@ -18,6 +19,7 @@ namespace Elements
         public Contenido(string nombre)
         {
             Nombre = nombre;
+            Hijo = new List<Contenido>();
         }
 
         public static List<Contenido> ComicCont
@@ -31,58 +33,69 @@ namespace Elements
             ComicCont = new List<Contenido>(); 
         }
 
-        public static List<string> GetComic(string x)
+        private static Dictionary<string, List<String>> DirFilter = new Dictionary<string, List<String>>();
+        public static List<string> GetByFilter(string dir, string filter)
         {
             List<string> files = new List<string>();
-            files.AddRange(Directory.GetFiles(x, "*.cbr"));
-            files.AddRange(Directory.GetFiles(x, "*.cbz"));
+            foreach(string type in DirFilter[filter])
+                files.AddRange(Directory.GetFiles(dir, type));
             files.Sort();
             return files;
         }
 
-        public void GetContent()
+        public void GetContent(string filter)
         {
-            List<string> files = new List<string>();
-            List<string> dirs = new List<string>();
-            List<Contenido> valor = new List<Contenido>();
-            //string thumb;
-            Console.WriteLine("\t=== Simulacro Iniciando ===");
-            dirs.AddRange(Directory.GetDirectories(this.Nombre));
-            //dirs.Sort();
-            foreach (string dir in dirs)
+            List<string> AuxContent = new List<string>();
+                Console.WriteLine("\t=== Simulacro Iniciando ===");
+            AuxContent.AddRange(Directory.GetDirectories(this.Nombre));
+            foreach (string dir in AuxContent)
             {
-                Contenido aux = new Contenido(dir);
-                aux.Padre = this;
-                files = GetComic(dir);
-                /*if (files.Count() < 1)
+                //var files = GetComic(dir);
+                var files = GetByFilter(dir,filter);
+                if (files.Count > 0)
                 {
-                    thumb = "def";
-                    continue;
+                    Contenido aux = new Contenido(dir);
+                    aux.Padre = this;
+                    aux.IsDir = true;
+                    this.Hijo.Add(aux);
                 }
-                else
-                {
-                    thumb = "\t\t" + files[0];
-                }*/
-                aux.IsDir = true;
-                valor.Add(aux);
             }
-            files = GetComic(this.Nombre);
-            foreach (string file in files)
+            AuxContent = GetByFilter(this.Nombre, filter);
+            foreach (string file in AuxContent)
             {
                 Contenido aux = new Contenido(file);
                 aux.Padre = this;
                 aux.IsDir = false;
-                valor.Add(aux);
+                this.Hijo.Add(aux);
             }
-            this.Hijo = valor;
+            List<BsonValue> Hijos = new List<BsonValue>();
+            foreach (Contenido hijo in this.Hijo)
+            {
+                Hijos.Add(BsonValue.Create(hijo.Nombre));
+                if (!Mongo.Exist(hijo.Nombre))
+                {
+                    var DirDoc = new BsonDocument
+                    {
+                        {"Nombre", BsonValue.Create(hijo.Nombre)},
+                        {"Padre", BsonValue.Create(this.Nombre)},
+                        {"Hijo",  new BsonArray(new List<string>())},
+                        {"IsDir", BsonValue.Create(hijo.IsDir)}
+                    };
+                    Mongo.AddNew(DirDoc, "Contenido");
+                }
+            }
+           var Doc = new BsonDocument
+            {
+                {"Nombre", BsonValue.Create(this.Nombre)},
+                {"Padre", BsonValue.Create(this.Padre==null ? "." : this.Padre.Nombre)},
+                {"Hijo", BsonValue.Create(Hijos)},
+                {"IsDir", BsonValue.Create(this.IsDir)}
+            };
+            if (!Mongo.Exist(this.Nombre))
+                Mongo.AddNew(Doc, "Contenido");
+            else
+                Mongo.Update(Doc, "Contenido");
             Console.WriteLine("\t=== Simulacro Terminado ===");
-        }
-
-        public static void AddtoDir(string cat, string dir){
-            DirMap[cat].Add(dir);
-            List<string> val = DirMap["Comic"];
-            string[] Dirs = Directory.GetFiles(val[0], "*.cb*");
-            string[] dirss = Directory.GetDirectories(val[0]);
         }
 
         public static void InitDir()
@@ -92,18 +105,10 @@ namespace Elements
             DirMap.Add("Musica", X);
             DirMap.Add("Video", X);
             DirMap.Add("Ebook", X);
-        }
-
-        public static string GetActualFile(string dir)
-        {
-            /*
-            aqui hay que poner algo para abrir el CB y saque la primer imagen 
-        usar mongoDB para controlar los status
-            asi mantener actualizada la miniatura de cada carpeta
-
-            hacer que los tiles leidos sean mas transparentes como ocultos
-            */
-            return "";
+            DirFilter.Add("Comic", new List<string>() { "*.cbr","*.cbz" });
+            DirFilter.Add("Musica", new List<string>() { "*.mp3" });
+            DirFilter.Add("Video", new List<string>() { "" });
+            DirFilter.Add("Ebook", new List<string>() { "*.epub","*.prc","*.mobi"});//", *.azw"
         }
 
         public static void agregarComicDirs(Contenido D)

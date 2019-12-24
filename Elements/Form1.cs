@@ -39,8 +39,7 @@ namespace Elements
             get { return UserReader; }
             set { UserReader = value; }
         }
-        /*
-        public MetroFramework.Controls.MetroLink MetroHome
+        /* public MetroFramework.Controls.MetroLink MetroHome
         {
             get { return metroHome; }
             set { metroHome = value; }
@@ -54,10 +53,11 @@ namespace Elements
         private void Form1_Load(object sender, EventArgs e)
         {
             _instance = this;
+            Mongo.Conect();
             MainPage MP = new MainPage();
             MP.Dock = DockStyle.Fill;
             metroPanel1.Controls.Add(MP);
-            Contenido.InitDir();
+            //Contenido.InitDir();
         }
 
         private void metroHome_Click(object sender, EventArgs e)
@@ -66,7 +66,8 @@ namespace Elements
             metroPanel1.Controls["MainPage"].BringToFront();
             metroPanel1.Controls.RemoveAt(1);
             metroHome.Visible = false;
-            Form1._instance.Style = MetroFramework.MetroColorStyle.Silver;
+            _instance.Style = MetroFramework.MetroColorStyle.Silver;
+            _instance.Refresh();
         }
 
         private void metroPanel1_SizeChanged(object sender, EventArgs e)

@@ -11,9 +11,14 @@ namespace Elements
 {
     public class Comic
     {
+        public string Titulo;
+        public string Ruta;
         public Image Portada;
         public List<Image> Paginas = new List<Image>();
-        public string Titulo;
+        public int Posicion;
+        public double Size;
+        public bool Status; //leido o no ... considerar complementar el no leido con % de (posicion/paginas)
+        public bool Tipo; //comic o manga
         public String Anterior;
         public String Siguiente;
 
