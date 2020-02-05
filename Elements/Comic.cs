@@ -40,7 +40,7 @@ namespace Elements
 
         public static Image GetThumb(string dir,int Wd, int Ht)
         {
-            Bitmap Img = new Bitmap("C:/Users/JuanEnrique/documents/visual studio 2015/Projects/Elements/Elements/Resources/The Incal.jpg");
+            Bitmap Img = global::Elements.Properties.Resources.Thwomp;
             IArchive archive = openArchive(dir);
             foreach (IArchiveEntry AZ in archive.Entries)
             {

@@ -100,13 +100,13 @@ namespace Elements
 
         public static void InitDir()
         {
-            List<string> X = new List<string>();
+            List<string> X = new List<string>() {""};
             DirMap.Add("Comic", X);
-            DirMap.Add("Musica", X);
+            DirMap.Add("Music", X);
             DirMap.Add("Video", X);
             DirMap.Add("Ebook", X);
             DirFilter.Add("Comic", new List<string>() { "*.cbr","*.cbz" });
-            DirFilter.Add("Musica", new List<string>() { "*.mp3" });
+            DirFilter.Add("Music", new List<string>() { "*.mp3" });
             DirFilter.Add("Video", new List<string>() { "" });
             DirFilter.Add("Ebook", new List<string>() { "*.epub","*.prc","*.mobi"});//", *.azw"
         }

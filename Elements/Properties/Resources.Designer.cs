@@ -63,9 +63,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _59 {
+        internal static System.Drawing.Bitmap AbajoCírculo {
             get {
-                object obj = ResourceManager.GetObject("59", resourceCulture);
+                object obj = ResourceManager.GetObject("AbajoCírculo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EKZ0HhiUEAAr7k9 {
+        internal static System.Drawing.Bitmap Alexa {
             get {
-                object obj = ResourceManager.GetObject("EKZ0HhiUEAAr7k9", resourceCulture);
+                object obj = ResourceManager.GetObject("Alexa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_abajo_círculo_64 {
+        internal static System.Drawing.Bitmap AppLogo {
             get {
-                object obj = ResourceManager.GetObject("icons8-abajo-círculo-64", resourceCulture);
+                object obj = ResourceManager.GetObject("AppLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_arriba_círculo_64 {
+        internal static System.Drawing.Bitmap ArribaCírculo {
             get {
-                object obj = ResourceManager.GetObject("icons8-arriba-círculo-64", resourceCulture);
+                object obj = ResourceManager.GetObject("ArribaCírculo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_cabaña_64 {
+        internal static System.Drawing.Bitmap Back {
             get {
-                object obj = ResourceManager.GetObject("icons8-cabaña-64", resourceCulture);
+                object obj = ResourceManager.GetObject("Back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_chevron_derecha_en_círculo_64 {
+        internal static System.Drawing.Bitmap Cabaña {
             get {
-                object obj = ResourceManager.GetObject("icons8-chevron-derecha-en-círculo-64", resourceCulture);
+                object obj = ResourceManager.GetObject("Cabaña", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_chevron_izquierda_en_círculo_64 {
+        internal static System.Drawing.Bitmap ChevronDerechaCírculo {
             get {
-                object obj = ResourceManager.GetObject("icons8-chevron-izquierda-en-círculo-64", resourceCulture);
+                object obj = ResourceManager.GetObject("ChevronDerechaCírculo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_cucha_50 {
+        internal static System.Drawing.Bitmap ChevronIzquierdaCírculo {
             get {
-                object obj = ResourceManager.GetObject("icons8-cucha-50", resourceCulture);
+                object obj = ResourceManager.GetObject("ChevronIzquierdaCírculo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_derecha_círculo_64 {
+        internal static System.Drawing.Bitmap Cucha {
             get {
-                object obj = ResourceManager.GetObject("icons8-derecha-círculo-64", resourceCulture);
+                object obj = ResourceManager.GetObject("Cucha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_girar_64 {
+        internal static System.Drawing.Bitmap DerechaCírculo {
             get {
-                object obj = ResourceManager.GetObject("icons8-girar-64", resourceCulture);
+                object obj = ResourceManager.GetObject("DerechaCírculo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_izquierda_en_círculo_2_50 {
+        internal static System.Drawing.Bitmap Girar {
             get {
-                object obj = ResourceManager.GetObject("icons8-izquierda-en-círculo-2-50", resourceCulture);
+                object obj = ResourceManager.GetObject("Girar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_izquierda_en_círculo_2_64 {
+        internal static System.Drawing.Bitmap IzquierdaCrculo {
             get {
-                object obj = ResourceManager.GetObject("icons8-izquierda-en-círculo-2-64", resourceCulture);
+                object obj = ResourceManager.GetObject("IzquierdaCrculo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,19 +183,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Imagen3 {
+        internal static System.Drawing.Bitmap LogoFS {
             get {
-                object obj = ResourceManager.GetObject("Imagen3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Secret_Warriors_Vol_1 {
-            get {
-                object obj = ResourceManager.GetObject("Secret Warriors Vol 1", resourceCulture);
+                object obj = ResourceManager.GetObject("LogoFS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,89 +203,9 @@ namespace Elements.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap The_Incal {
+        internal static System.Drawing.Bitmap Thwomp {
             get {
-                object obj = ResourceManager.GetObject("The Incal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap The_New_52_Futures_End_Vol_1 {
-            get {
-                object obj = ResourceManager.GetObject("The New 52 Futures End Vol 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap What_If___Spider_Man_House_Of_M_Vol_1 {
-            get {
-                object obj = ResourceManager.GetObject("What If - Spider-Man House Of M Vol 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap X_Campus_Vol_1 {
-            get {
-                object obj = ResourceManager.GetObject("X-Campus Vol 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap X_Men_Millennial_Visions_Vol_1_2000 {
-            get {
-                object obj = ResourceManager.GetObject("X-Men Millennial Visions Vol 1 2000", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap X_Men_Millennial_Visions_Vol_1_2001 {
-            get {
-                object obj = ResourceManager.GetObject("X-Men Millennial Visions Vol 1 2001", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap X_Men_Phoenix_Legacy_Of_Fire_Vol_1 {
-            get {
-                object obj = ResourceManager.GetObject("X-Men Phoenix Legacy Of Fire Vol 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Y_El_último_hombre {
-            get {
-                object obj = ResourceManager.GetObject("Y El último hombre", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Young_Justice {
-            get {
-                object obj = ResourceManager.GetObject("Young Justice", resourceCulture);
+                object obj = ResourceManager.GetObject("Thwomp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

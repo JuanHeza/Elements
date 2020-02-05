@@ -80,7 +80,7 @@
             // metroBack
             // 
             this.metroBack.BackColor = System.Drawing.Color.Transparent;
-            this.metroBack.BackgroundImage = global::Elements.Properties.Resources.icons8_chevron_izquierda_en_círculo_64;
+            this.metroBack.BackgroundImage = global::Elements.Properties.Resources.ChevronIzquierdaCírculo;
             this.metroBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.metroBack.DisplayFocus = true;
             this.metroBack.FontSize = MetroFramework.MetroLinkSize.Medium;
@@ -99,7 +99,7 @@
             // metroHome
             // 
             this.metroHome.BackColor = System.Drawing.Color.Transparent;
-            this.metroHome.BackgroundImage = global::Elements.Properties.Resources.icons8_cabaña_64;
+            this.metroHome.BackgroundImage = global::Elements.Properties.Resources.Cabaña;
             this.metroHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.metroHome.DisplayFocus = true;
             this.metroHome.FontSize = MetroFramework.MetroLinkSize.Medium;

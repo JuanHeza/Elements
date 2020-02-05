@@ -74,6 +74,7 @@
             this.tileVideo.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.tileVideo.UseSelectable = true;
             this.tileVideo.UseStyleColors = true;
+            this.tileVideo.Click += new System.EventHandler(this.tileVideo_Click);
             // 
             // tileMusica
             // 
@@ -92,6 +93,7 @@
             this.tileMusica.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.tileMusica.UseSelectable = true;
             this.tileMusica.UseStyleColors = true;
+            this.tileMusica.Click += new System.EventHandler(this.tileMusica_Click);
             // 
             // tileEbook
             // 

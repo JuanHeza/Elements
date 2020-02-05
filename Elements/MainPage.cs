@@ -86,7 +86,7 @@ namespace Elements
             Console.WriteLine("Click Comic");
             Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
             MainPage.Filtro = "Comic"; 
-            if (Contenido.DirMap["Comic"].Count <= 0)
+            if (Contenido.DirMap["Comic"].Count <= 1)
             {
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 if (result == DialogResult.Yes)
@@ -114,13 +114,13 @@ namespace Elements
             Console.WriteLine("Click Ebook");
             Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
             MainPage.Filtro = "Ebook";
-            if (Contenido.DirMap["Ebook"].Count <= 0)
+            if (Contenido.DirMap["Ebook"].Count <= 1)
             {
                 DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 if (result == DialogResult.Yes)
                 {
                     //////////////////////////////////////////////
-                    Mongo.AddPath("Ebook", "C:/Users/JuanEnrique/Desktop/DAKOTA/Library");
+                    Mongo.AddPath("Ebook", "C:/Users/JuanEnrique/Desktop/DAKOTA/Library/");
                     //////////////////////////////////////////////
                 }
             }
@@ -128,14 +128,14 @@ namespace Elements
             {
                 foreach (string dat in Contenido.DirMap["Ebook"])
                     Console.WriteLine(dat);
-                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("ComicControl"))
+                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("EbookControl"))
                 {
-                    ComicControl EbookCtrl = new ComicControl();
+                    EbookControl EbookCtrl = new EbookControl();
                     EbookCtrl.Dock = DockStyle.Fill;
                     //Add UserControl to Metro Panel
                     Form1.Instance.MetroContainer.Controls.Add(EbookCtrl);
                 }
-                Form1.Instance.MetroContainer.Controls["ComicControl"].BringToFront();
+                Form1.Instance.MetroContainer.Controls["EbookControl"].BringToFront();
                 Form1.Instance.metroHome.Visible = true;
             }
         }
@@ -153,6 +153,69 @@ namespace Elements
             }
             Form1.Instance.MetroContainer.Controls["ConfigControl"].BringToFront();
             Form1.Instance.metroHome.Visible = true;
+        }
+
+        private void tileMusica_Click(object sender, EventArgs e)
+        {//check metro UserControl
+            Console.WriteLine("Click Music");
+            Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
+            MainPage.Filtro = "Music";
+            if (Contenido.DirMap["Music"].Count <= 1)
+            {
+                DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
+                {
+                    //////////////////////////////////////////////
+                    // Mongo.AddPath("Ebook", "C:/Users/JuanEnrique/Desktop/DAKOTA/Library/");
+                    //////////////////////////////////////////////
+                }
+            }
+            else
+            {
+                foreach (string dat in Contenido.DirMap["Musica"])
+                    Console.WriteLine(dat);
+                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("MusicaControl"))
+                {
+                    MusicControl MusicCtrl = new MusicControl();
+                    MusicCtrl.Dock = DockStyle.Fill;
+                    //Add UserControl to Metro Panel
+                    Form1.Instance.MetroContainer.Controls.Add(MusicCtrl);
+                }
+                Form1.Instance.MetroContainer.Controls["MusicControl"].BringToFront();
+                Form1.Instance.metroHome.Visible = true;
+            }
+        }
+
+        private void tileVideo_Click(object sender, EventArgs e)
+        {//check metro UserControl
+            Console.WriteLine("Click Video");
+            Form1._instance.Style = (sender as MetroFramework.Controls.MetroTile).Style;
+            MainPage.Filtro = "Video";
+            if (Contenido.DirMap["Video"].Count <= 1)
+            {
+                DialogResult result = MetroMessageBox.Show(this, "\t\t ¿Desea Configurar Alguna?", "Error, No hay Libreria Configurada", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
+                {
+                    //////////////////////////////////////////////
+                    //Mongo.AddPath("Ebook", "C:/Users/JuanEnrique/Desktop/DAKOTA/Library/");
+                    //////////////////////////////////////////////
+                }
+            }
+            else
+            {
+                foreach (string dat in Contenido.DirMap["Video"])
+                    Console.WriteLine(dat);
+                if (!Form1.Instance.MetroContainer.Controls.ContainsKey("VideoControl"))
+                {
+                    //VideoControl VideoCtrl = new VideoControl();
+                    //VideoCtrl.Dock = DockStyle.Fill;
+                    //Add UserControl to Metro Panel
+                    //Form1.Instance.MetroContainer.Controls.Add(VideoCtrl);
+                }
+                Form1.Instance.MetroContainer.Controls["VideoControl"].BringToFront();
+                Form1.Instance.metroHome.Visible = true;
+
+            }
         }
     }
 }

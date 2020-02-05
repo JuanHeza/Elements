@@ -84,6 +84,14 @@
       <HintPath>..\packages\MongoDB.Driver.Core.2.9.2\lib\net452\MongoDB.Driver.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SharpCompress, Version=0.24.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpCompress.0.24.0\lib\net45\SharpCompress.dll</HintPath>
       <Private>True</Private>
@@ -132,12 +140,30 @@
     </Compile>
     <Compile Include="Contenido.cs" />
     <Compile Include="Ebook.cs" />
+    <Compile Include="EbookControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EbookControl.Designer.cs">
+      <DependentUpon>EbookControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EbookReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EbookReader.Designer.cs">
+      <DependentUpon>EbookReader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mongo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MusicControl.Designer.cs">
+      <DependentUpon>MusicControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Notable.cs">
       <SubType>Form</SubType>
@@ -174,8 +200,17 @@
     <EmbeddedResource Include="ConfigControl.resx">
       <DependentUpon>ConfigControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EbookControl.resx">
+      <DependentUpon>EbookControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EbookReader.resx">
+      <DependentUpon>EbookReader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicControl.resx">
+      <DependentUpon>MusicControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notable.resx">
       <DependentUpon>Notable.cs</DependentUpon>
@@ -213,30 +248,14 @@
   <ItemGroup>
     <Content Include="59.ico" />
     <Content Include="Registro.txt" />
-    <None Include="Resources\ST.png" />
-    <None Include="Resources\Imagen3.png" />
-    <None Include="Resources\59.png" />
-    <None Include="Resources\icons8-cabaña-64.png" />
-    <None Include="Resources\icons8-izquierda-en-círculo-2-64.png" />
+    <None Include="Resources\Thwomp.png" />
+    <None Include="Resources\icons8-izquierda-en-círculo-2-642.png" />
+    <None Include="Resources\icons8-izquierda-en-círculo-2-641.png" />
     <None Include="Resources\icons8-izquierda-en-círculo-2-50.png" />
-    <None Include="Resources\icons8-girar-64.png" />
-    <None Include="Resources\icons8-derecha-círculo-64.png" />
-    <None Include="Resources\icons8-cucha-50.png" />
-    <None Include="Resources\icons8-chevron-izquierda-en-círculo-64.png" />
-    <None Include="Resources\icons8-chevron-derecha-en-círculo-64.png" />
-    <None Include="Resources\icons8-arriba-círculo-64.png" />
-    <None Include="Resources\icons8-abajo-círculo-64.png" />
+    <None Include="Resources\ST.png" />
+    <None Include="Resources\59.png" />
     <None Include="Resources\EKZ0HhiUEAAr7k9.jpg" />
-    <None Include="Resources\Young Justice.jpg" />
-    <None Include="Resources\Y El último hombre.jpg" />
-    <None Include="Resources\X-Men Phoenix Legacy Of Fire Vol 1.jpg" />
-    <None Include="Resources\X-Men Millennial Visions Vol 1 2001.jpg" />
-    <None Include="Resources\X-Men Millennial Visions Vol 1 2000.jpg" />
-    <None Include="Resources\X-Campus Vol 1.jpg" />
-    <None Include="Resources\What If - Spider-Man House Of M Vol 1.jpg" />
-    <None Include="Resources\The New 52 Futures End Vol 1.jpg" />
     <None Include="Resources\The Incal.jpg" />
-    <None Include="Resources\Secret Warriors Vol 1.jpg" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

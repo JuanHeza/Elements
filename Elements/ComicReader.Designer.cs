@@ -184,7 +184,7 @@
             // PanelRetrocede
             // 
             this.PanelRetrocede.BackColor = System.Drawing.Color.Transparent;
-            this.PanelRetrocede.BackgroundImage = global::Elements.Properties.Resources.icons8_chevron_izquierda_en_círculo_64;
+            this.PanelRetrocede.BackgroundImage = global::Elements.Properties.Resources.ChevronIzquierdaCírculo;
             this.PanelRetrocede.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PanelRetrocede.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelRetrocede.HorizontalScrollbarBarColor = true;
@@ -203,7 +203,7 @@
             // PanelAvanza
             // 
             this.PanelAvanza.BackColor = System.Drawing.Color.Transparent;
-            this.PanelAvanza.BackgroundImage = global::Elements.Properties.Resources.icons8_chevron_derecha_en_círculo_64;
+            this.PanelAvanza.BackgroundImage = global::Elements.Properties.Resources.ChevronDerechaCírculo;
             this.PanelAvanza.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PanelAvanza.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanelAvanza.HorizontalScrollbarBarColor = true;
@@ -225,7 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.BackgroundImage = global::Elements.Properties.Resources.EKZ0HhiUEAAr7k9;
+            this.BackgroundImage = global::Elements.Properties.Resources.Alexa;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.PanelAvanza);
             this.Controls.Add(this.PanelRetrocede);

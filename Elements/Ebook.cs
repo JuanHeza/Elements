@@ -6,6 +6,8 @@ using System.Drawing;
 using System.IO;
 using VersOne.Epub;
 using System.Threading.Tasks;
+using PdfSharp.SharpZipLib;
+using PdfSharp;
 
 namespace Elements
 {
@@ -29,16 +31,22 @@ namespace Elements
 
         public static Image GetThumb(string dir, int Wd, int Ht)
         {
-            Image coverImage = new Bitmap("C:/Users/JuanEnrique/documents/visual studio 2015/Projects/Elements/Elements/Resources/The Incal.jpg");
-            EpubBook book = EpubReader.ReadBook(dir);
-            byte[] coverImageContent = book.CoverImage;
-            if (coverImageContent != null)
+            Image coverImage = global::Elements.Properties.Resources.Thwomp;
+            byte[] coverImageContent = null;//Elements.Properties.Resources.Thwomp;
+            if (dir.Contains(".epub"))
             {
-                using (MemoryStream coverImageStream = new MemoryStream(coverImageContent))
-                {
-                    coverImage = Image.FromStream(coverImageStream);
-                }
+                EpubBook book = EpubReader.ReadBook(dir);
+                coverImageContent = book.CoverImage;
             }
+            if (dir.Contains(".prc"))   {}
+            if (dir.Contains(".mobi"))  {}
+            if (coverImageContent != null)
+                {
+                    using (MemoryStream coverImageStream = new MemoryStream(coverImageContent))
+                    {
+                        coverImage = Image.FromStream(coverImageStream);
+                    }
+                }
             return coverImage.GetThumbnailImage(Wd, Ht, null, IntPtr.Zero);
         }
 

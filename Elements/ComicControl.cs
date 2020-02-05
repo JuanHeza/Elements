@@ -21,7 +21,6 @@ namespace Elements
         List<MetroFramework.Controls.MetroTile> Teselas = new List<MetroFramework.Controls.MetroTile>();
         int Min = 6;
         int Max = 9;
-        string Filtro;
 
         public ComicControl()
         {
@@ -34,8 +33,11 @@ namespace Elements
             Sem = new System.Threading.Semaphore(Min, Min);
             foreach (string DR in Contenido.DirMap[MainPage.Filtro])
             {
-                Contenido cont = new Contenido(DR);
-                TilesCreate(cont);
+                if (DR != "")
+                {
+                    Contenido cont = new Contenido(DR);
+                    TilesCreate(cont);
+                }
             }
         }
 
@@ -59,6 +61,9 @@ namespace Elements
                 X.ActiveControl = null;
                 X.Visible = true;
                 X.TabIndex = ++index;
+                X.LostFocus += new System.EventHandler(Hover);
+                X.GotFocus += new System.EventHandler(Hover);
+                X.TextAlign = ContentAlignment.MiddleCenter;
                 new Thread(() => TilesGrid(hijo.IsDir, Min-1, X,false)).Start();
             }
             while (Teselas.Count < cont.Hijo.Count)
@@ -113,6 +118,7 @@ namespace Elements
                 if (!IsDir)
                 {
                     X.Style = MetroColorStyle.Green;
+                    X.Text = "";
                     switch (MainPage.Filtro)
                     {
                         case "Comic":
@@ -127,7 +133,15 @@ namespace Elements
                             break;
                     }
                     X.UseTileImage = true;
-                    X.Click += new System.EventHandler(Comic_Click);
+                    switch(MainPage.Filtro)
+                    {
+                        case "Comic":
+                            X.Click += new System.EventHandler(Comic_Click);
+                            break;
+                        case "Ebook":
+                            X.Click += new System.EventHandler(Ebook_Click);
+                            break;
+                    }
                 }
                 else
                 {
@@ -202,6 +216,48 @@ namespace Elements
             this.Controls.Clear();
             this.Refresh();
             Teselas.Clear();
+        }
+
+        private void Ebook_Click(object sender, EventArgs e)
+        {
+            var Q = (sender as MetroFramework.Controls.MetroTile);
+            string a = Q.Name;
+            List<Contenido> Tsx = Contenido.ComicCont;
+            Contenido T = new Contenido("");
+            foreach (Contenido t in Tsx)
+            {
+                if (t.Nombre == a)
+                {
+                    T = t;
+                    break;
+                }
+            }
+            
+            EbookReader EbookRDR = new EbookReader(Form1._instance.Width, Form1._instance.Height, T);
+            EbookRDR.Dock = DockStyle.Fill;
+            //Add UserControl to Metro Panel
+            Form1._instance.MetroUserReader.Controls.Add(EbookRDR);
+            Form1._instance.MetroUserReader.Visible = true;
+        }
+
+        public void Hover(object sender, EventArgs e)
+        {
+            var tile = (sender as MetroFramework.Controls.MetroTile);
+            if (tile.Style != MetroFramework.MetroColorStyle.Magenta)
+            {
+                if (tile.Focused)
+                {
+                    tile.UseTileImage = false;
+                    tile.Text = tile.Name.Replace(Form1.actualFolder.Nombre, "");
+                   // Console.WriteLine("hover {0}", )
+                }
+                else
+                {
+                    tile.UseTileImage = true;
+                    tile.Text = "";
+                }
+
+            }
         }
     }
 }

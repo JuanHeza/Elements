@@ -171,8 +171,10 @@ namespace Elements
         public static void InitializePath()
         {
             Contenido.InitDir();
+            Dictionary<string, List<string>> Map = new Dictionary<string, List<string>>();
             var collection = Mongo.DataBase.GetCollection<BsonDocument>("Local");
             var Data = collection.Find(new BsonDocument("Type", "Directories"));
+
             if (Data.ToList().Count < 1)
             {
                 var documento = new BsonDocument
@@ -189,17 +191,17 @@ namespace Elements
             {
                 foreach (var dir in Data.ToList())
                 {
-                    foreach (var val in dir["Comic"].AsBsonArray.ToList())
-                        Contenido.DirMap["Comic"].Add(val.AsString);
-
-                    foreach (var val in dir["Ebook"].AsBsonArray.ToList())
-                        Contenido.DirMap["Ebook"].Add(val.AsString);
-
-                    foreach (var val in dir["Video"].AsBsonArray.ToList())
-                        Contenido.DirMap["Video"].Add(val.AsString);
-
-                    foreach (var val in dir["Music"].AsBsonArray.ToList())
-                        Contenido.DirMap["Music"].Add(val.AsString);
+                    foreach (var f in dir)
+                    {
+                        if (Contenido.DirMap.ContainsKey(f.Name))
+                        {
+                            List<string> aux = new List<string>() {""};
+                            foreach (var val in f.Value.AsBsonArray.ToList()) {
+                                aux.Add(val.AsString);
+                            }
+                            Contenido.DirMap[f.Name] = aux;
+                        }
+                    }
                 }
             }
         }
